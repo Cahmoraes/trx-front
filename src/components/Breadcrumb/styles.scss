@@ -1,0 +1,25 @@
+.breadcrumb {
+  padding: 30px 0;
+  &__list {
+    display: -webkit-flex;
+    display: flex;
+    li {
+      list-style: none;
+      a {
+        margin: 0 8px;
+        font-size: 1.2rem;
+        color: $primary;
+        text-decoration: none;
+        font-weight: 700;
+      }
+      span {
+        &.active {
+          color: $gray1;
+          font-weight: 400;
+          margin: 0 8px;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

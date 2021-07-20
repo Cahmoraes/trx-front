@@ -1,0 +1,20 @@
+.back-link {
+  border-bottom: 1px solid $gray4;
+
+  a {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: $primary;
+    padding: 20px 0px;
+    width: 100%;
+
+    img {
+      margin-right: 12px;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+}

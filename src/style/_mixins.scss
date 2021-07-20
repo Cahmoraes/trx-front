@@ -1,0 +1,22 @@
+@mixin device($device) {
+  @if $device == xl {
+    @media screen and (min-width: $xl) {
+      @content;
+    }
+  }
+  @else if $device == lg {
+    @media screen and (min-width: $lg) {
+      @content;
+    }
+  }
+  @else if $device == md {
+    @media screen and (min-width: $md) {
+      @content;
+    }
+  }
+  @else if $device == sm {
+    @media screen and (min-width: $sm) {
+      @content;
+    }
+  }
+}

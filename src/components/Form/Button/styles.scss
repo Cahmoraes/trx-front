@@ -1,0 +1,68 @@
+.btn {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  border: none;
+  justify-content: center;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  &.primary {
+    color: $white;
+    background: $primary;
+
+    &:hover {
+      background-color: $primary-light;
+      transition: all 200ms ease;
+    }
+
+    &.primary:disabled {
+      background: $gray3;
+    }
+  }
+
+  &.secondary {
+    background: $secondary;
+    color: $primary;
+
+    &:hover {
+      background: $secondary-light;
+      transition: all 200ms ease;
+    }
+
+    &.secondary:disabled {
+      background: $white;
+      border: 1px solid $gray3;
+      color: $gray3;
+    }
+  }
+
+  &.white {
+    border: 1px solid $primary;
+    background: $white;
+    color: $primary;
+
+    &:hover {
+      background: $white;
+      color: $primary-light;
+      border: 1px solid $primary-light;
+      transition: all 200ms ease;
+    }
+
+    &.white:disabled {
+      background: $gray3;
+      border: 1px solid $gray3;
+      color: $white;
+    }
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+    object-fit: contain;
+  }
+}

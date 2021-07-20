@@ -1,0 +1,49 @@
+$storage-colors: (
+  warning: $status-atention,
+  success: $status-success,
+  info: $primary-light,
+  error: $status-negative,
+);
+
+@each $key, $colors in $storage-colors {
+  .alert.alert-#{$key} {
+    background-color: $colors;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.alert {
+  display: none;
+  align-items: center;
+  padding: 7px 10px;
+  width: 100%;
+  transition: all 0.2s ease;
+  position: relative;
+  span {
+    color: $white;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 0 10px;
+  }
+
+  .icon-component {
+    display: flex;
+    align-items: center;
+  }
+
+  button {
+    background: url("../../assets/images/icons/icon-close.svg");
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    display: block;
+    outline: none;
+  }
+
+  img {
+    height: 24px;
+    width: 24px;
+  }
+}

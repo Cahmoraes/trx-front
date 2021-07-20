@@ -1,0 +1,126 @@
+#search {
+  .breadcrumb {
+    display: none;
+
+    @media screen and (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  .search-content {
+    @media screen and (min-width: 992px) {
+      background: $white;
+      border: 1px solid $gray3;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+      padding: 16px;
+    }
+    .search-filter {
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $gray4;
+        @media (min-width: 768px) {
+          border-bottom: none;
+        }
+      }
+      &__clean {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 10px;
+        margin: 16px 0;
+
+        .btn {
+          background: $white;
+          color: $gray2;
+          font-weight: 400;
+          font-size: 1.2rem;
+          text-decoration: underline;
+        }
+      }
+      &__title {
+        display: block;
+        @media screen and (min-width: 992px) {
+          display: none;
+        }
+      }
+      &__title-mobile {
+        display: none;
+        @media screen and (min-width: 992px) {
+          display: block;
+          margin: 10px 0 20px 0;
+        }
+      }
+    }
+  }
+  .search-result {
+    .accordion {
+      .title {
+        font-size: 1.8rem;
+        color: $gray1;
+      }
+      .accordion-content {
+        padding: 16px 0;
+        &__hiperlink {
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            li {
+              list-style: none;
+              font-size: 1.4rem;
+              color: $primary;
+              font-weight: 400;
+              margin-left: 20px;
+
+              &.active {
+                color: $gray1;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                margin-left: 0;
+
+                &:after {
+                  content: "";
+                  background: $primary
+                    url("../../assets/images/icons/icon-close.svg");
+                  display: block;
+                  margin-left: 7px;
+                  height: 16px;
+                  width: 16px;
+                  border-radius: 4px;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+
+        .hiperlink__small {
+          font-weight: 400;
+          color: $primary;
+          text-decoration: none;
+          font-size: 1.4rem;
+        }
+
+        &__tag {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px 10px;
+        }
+      }
+      hr {
+        border: 1px solid $gray3;
+      }
+    }
+    .btn {
+      display: block;
+      @media screen and (min-width: 992px) {
+        display: none;
+      }
+    }
+  }
+}

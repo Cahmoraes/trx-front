@@ -1,0 +1,53 @@
+.sitemap-body {
+	background: #222;
+	padding: 50px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	img {
+		width: 200px;
+	}
+
+	.desc {
+		margin: 20px 0;
+		color: #fff;
+		font-size: 16px;
+	}
+
+	.content {
+		width: 100%;
+		padding: 20px;
+		border-radius: 14px;
+		display: flex;
+		justify-content: center;
+		gap: 100px;
+
+		li {
+			list-style-type: circle;
+			color: #fff;
+			margin: 10px auto;
+
+			a {
+				color: #f2f2f2;
+			}
+
+			&:hover {
+				list-style-type: disc;
+				color: #c6d30d;
+				a {
+					color: #c6d30d;
+				}
+			}
+		}
+	}
+
+	h3 {
+		text-align: left;
+		font-weight: bold;
+		font-size: 19px;
+		color: #f2f2f2;
+		margin: 36px 0 20px;
+	}
+}

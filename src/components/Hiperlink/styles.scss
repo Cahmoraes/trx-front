@@ -1,0 +1,15 @@
+.hiperlink {
+  display: flex;
+  gap: 10px;
+  text-decoration-line: underline;
+  color: $primary-light;
+  font-weight: 700;
+
+  &__large {
+    font-size: 1.4rem;
+  }
+
+  &__small {
+    font-size: 1.2rem;
+  }
+}
