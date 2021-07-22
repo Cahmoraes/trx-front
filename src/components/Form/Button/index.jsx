@@ -1,7 +1,7 @@
-export function Button ({ color="primary", children, ...rest }) {
+export function Button ({ color = "primary", bold = false, children, ...rest }) {
   return (
     <button
-      className={`btn ${color}`}
+      className={`btn ${color} ${bold ? 'u-bold':''}`}
       {...rest}
     >
       {children}

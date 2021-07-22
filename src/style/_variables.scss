@@ -1,24 +1,40 @@
-// Colors
-$primary: #002f87;
-$primary-dark: #011e55;
-$primary-light: #2f67cf;
+/* Colors */
+// primary
+$primary-400: #380C43;
+$primary-300: #58006D;
+$primary-200: #BD54D7;
+$primary-100: #FAE5FF;
 
-$secondary: #c1d82f;
-$secondary-dark: #91a800;
-$secondary-light: #dff54f;
+// secondary
+$secondary-300: #133D09;
+$secondary-200: #166D00;
+$secondary-100: #64BE4D;
 
-$gray1: #111111;
-$gray2: #767676;
-$gray3: #d2d2d2;
-$gray4: #eeeeee;
-$gray5: #fafafa;
+// shades of gray
+$gray-500: #212529;
+$gray-400: #5E5E61;
+$gray-300: #8F9095;
+$gray-200: #D8D8D8;
+$gray-100: #F5F5F5;
 
-$status-negative: #c6161d;
-$status-atention: #db8a10;
-$status-success: #90e839;
-
+// Extreme
 $black: #000000;
 $white: #ffffff;
+
+// Success
+$success-300: #0B4F1A;
+$success-200: #28A745;
+$success-100: #D4EDDA;
+
+// Attention
+$attention-300: #6B3208;
+$attention-200: #E39402;
+$attention-100: #FFE5CD;
+
+// Erro
+$error-300: #721C24;
+$error-200: #DC3243;
+$error-100: #F8D7DA;
 
 // Media Query
 $xl: 1200px;
