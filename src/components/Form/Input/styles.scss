@@ -1,0 +1,68 @@
+.form-group {
+  position: relative;
+
+  &__label {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 12px;
+    color: $gray-300;
+  }
+
+  .has-icon {
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    top: 39px;
+  }
+
+  &__input {
+    background: $white;
+    border: 1px solid $gray-300;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    width: 100%;
+    font-weight: normal;
+    height: 40px;
+    display: block;
+    padding: 0 16px;
+    outline: none;
+    margin-top: 8px;
+
+    &.error {
+      border-color: $error-200!important;
+    }
+
+    &:focus {
+      border-color: $primary-200;
+    }
+
+    &:disabled {
+      background: $gray-100;
+      border-color: $gray-300;
+      color: $gray-300;
+    }
+
+    &.is-filled {
+      border-color: $gray-400;
+    }
+  }
+
+  .form-component {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 8px;
+
+    &__link {
+      color: $primary-100;
+      margin-right: 8px;
+      font-weight: 400;
+    }
+
+    &__msg-error {
+      color: $error-200;
+      font-weight: 400;
+    }
+  }
+}
