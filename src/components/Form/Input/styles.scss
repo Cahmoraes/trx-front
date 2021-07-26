@@ -2,10 +2,9 @@
   position: relative;
 
   &__label {
-    font-weight: 700;
     font-size: 1rem;
-    line-height: 12px;
-    color: $gray-300;
+    line-height: 1.4rem;
+    color: $gray-500;
   }
 
   .has-icon {
@@ -54,15 +53,11 @@
     justify-content: flex-start;
     margin-top: 8px;
 
-    &__link {
-      color: $primary-100;
-      margin-right: 8px;
-      font-weight: 400;
-    }
-
     &__msg-error {
       color: $error-200;
       font-weight: 400;
+      background: url("../../../assets/images/icons/information.svg") no-repeat left;
+      padding-left: 16px;
     }
   }
 }

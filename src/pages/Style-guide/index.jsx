@@ -5,6 +5,7 @@ import { Loader } from '../../components/Loader';
 import { Badge } from '../../components/Badge';
 import { Hiperlink } from '../../components/Hiperlink';
 import { Input } from '../../components/Form/Input';
+import { Select } from '../../components/Form/Select';
 
 export function StyleGuide() {
 
@@ -94,59 +95,86 @@ export function StyleGuide() {
       <section className="container-fluid py-5">
         <div className="row">
           <div className="col">
-          <SectionTitle>Input</SectionTitle>
-          <Input label="Label" placeholder="Teste" />
-          <br />
-          <Input label="Label" placeholder="Teste" color="success" />
-          <br />
-          <Input
-            label="Label"
-            placeholder="insira seu email"
-            showIcon={true}
-            message="informação inválida"
-            color="error"
-          />
-          <br />
-          <Input
-            label="Label"
-            placeholder="insira seu email"
-            message="informação inválida"
-            disabled
-          />
-          <br />
-          <Input
-            color="error"
-            label="Label"
-            placeholder="insira seu email"
-            link="isso é um link"
-            href="https://uol.com.br"
-            message="informação inválida"
-          />
-          <br />
-          <Input
-            label="Label"
-            placeholder="Teste"
-            color="success"
-            link="isso é um link"
-            href="https://uol.com.br"
-          />
-          <br />
-          <Input
-            label="Label"
-            placeholder="Teste"
-            link="isso é um link"
-            href="https://uol.com.br"
-          />
-          <br />
-          <Input
-            label="Label"
-            placeholder="insira seu email"
-            message="informação inválida"
-            link="isso é um link"
-            href="https://uol.com.br"
-            disabled
-          />
-          <br />
+            <SectionTitle>Input</SectionTitle>
+            <Input label="Label" placeholder="Teste" />
+            <br />
+            <Input label="Label" placeholder="Teste" color="success" />
+            <br />
+            <Input
+              label="Label"
+              placeholder="insira seu email"
+              showIcon={true}
+              message="informação inválida"
+              color="error"
+            />
+            <br />
+            <Input
+              label="Label"
+              placeholder="insira seu email"
+              message="informação inválida"
+              disabled
+            />
+            <br />
+            <Input
+              color="error"
+              label="Label"
+              placeholder="insira seu email"
+              link="isso é um link"
+              href="https://uol.com.br"
+              message="informação inválida"
+            />
+            <br />
+            <Input
+              label="Label"
+              placeholder="Teste"
+              color="success"
+              link="isso é um link"
+              href="https://uol.com.br"
+            />
+            <br />
+            <Input
+              label="Label"
+              placeholder="Teste"
+              link="isso é um link"
+              href="https://uol.com.br"
+            />
+            <br />
+            <Input
+              label="Label"
+              placeholder="insira seu email"
+              message="informação inválida"
+              link="isso é um link"
+              href="https://uol.com.br"
+              disabled
+            />
+            <br />
+          </div>
+        </div>
+      </section>
+
+      <section className="container-fluid py-5">
+        <div className="row">
+          <div className="col">
+            <SectionTitle>Input</SectionTitle>
+            <Select name="select de teste" message="label">
+              <option value="">SP</option>
+              <option value="">RJ</option>
+              <option value="">MG</option>
+            </Select>
+            <br />
+
+            <Select disabled name="select de teste" message="label">
+              <option value="">SP</option>
+              <option value="">RJ</option>
+              <option value="">MG</option>
+            </Select>
+            <br />
+
+            <Select error name="select de teste" message="label">
+              <option value="">SP</option>
+              <option value="">RJ</option>
+              <option value="">MG</option>
+            </Select>
           </div>
         </div>
       </section>

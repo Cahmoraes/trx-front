@@ -1,0 +1,44 @@
+.container-component {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__label {
+    font-size: 1.4rem;
+    color: $gray-500;
+    margin-bottom: 10px;
+  }
+
+  &__select {
+    border: 1px solid $primary-400;
+    height: 40px;
+    padding: 0 14px 0 12px;
+    outline: none;
+    color: $primary-400;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: $white;
+    background: $white url("../../../assets/images/icons/icon-down.svg")
+      no-repeat right center;
+    background-size: 13px auto;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+
+    &.is-invalid {
+      border-color: $error-200;
+    }
+
+    &:hover, &:focus {
+      border-color: $primary-200;
+    }
+
+    &:disabled {
+      background-color: $gray-100;
+      border-color: $gray-200;
+      color: $gray-300;
+      & svg {
+        stroke: $gray-300;
+      } 
+    }
+  }
+}

@@ -46,11 +46,6 @@ export function Input({
 
         {link && (
           <div className="form-component">
-            {link && (
-              <a className="form-component__link" href={href}>
-                {link}
-              </a>
-            )}
             {color && (
               <span className={`form-component__msg-${color}`}>{message}</span>
             )}
