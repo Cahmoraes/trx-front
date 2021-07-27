@@ -3,28 +3,27 @@ import { ReactComponent as IconAlertWarning } from "../../assets/images/icons/ic
 import { ReactComponent as IconAlertError } from "../../assets/images/icons/icon-error.svg";
 import { ReactComponent as IconClose } from "../../assets/images/icons/icon-close.svg";
 
-export function Alert(props) {
-  const className = props.className ? `alert ${props.className}` : "alert";
+export function Alert({text, color}) {
   return (
     <>
-      <div className={className}>
+      <div className={`alert ${color ? color : ''}`}>
         <div className="icon-component">
-          {props.className === "alert-warning" && (
+          {color === "alert-warning" && (
             <IconAlertWarning
               className="icon-alert icon-warning"
             />
           )}
-          {props.className === "alert-error" && (
+          {color === "alert-error" && (
             <IconAlertError
               className="icon-alert icon-error"
             />
           )}
-          {props.className === "alert-success" && (
+          {color === "alert-success" && (
             <IconAlertSuccess
               classIame="icon-alert icon-success"
             />
           )}
-          <span>{props.text}</span>
+          <span>{text}</span>
         </div>
         <button className="btn">
           <IconClose />

@@ -186,21 +186,21 @@ export function StyleGuide() {
           <div className="col">
             <SectionTitle>Alert</SectionTitle>
             <Alert
-              className="alert-success"
+              color="alert-success"
               text="Example text alert mensagem success"
               alt="Example text alert mensagem success"
             />
             <br />
 
             <Alert
-              className="alert-warning"
+              color="alert-warning"
               text="Example text alert mensagem warning"
               alt="Example text alert mensagem warning"
             />
             <br />
 
             <Alert
-              className="alert-error"
+              color="alert-error"
               text="Example text alert mensagem error"
               alt="Example text alert mensagem error"
             />
