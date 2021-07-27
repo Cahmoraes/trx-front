@@ -1,0 +1,54 @@
+$storage-colors: (
+  warning: (
+    fontColor: $attention-300,
+    backgroundColor: $attention-100
+  ),
+  success: (
+    fontColor: $success-300,
+    backgroundColor: $success-100
+  ),
+  error: (
+    fontColor: $error-300,
+    backgroundColor: $error-100
+  ),
+);
+
+@each $keyColors, $colors in $storage-colors {
+  .alert.alert-#{$keyColors} {
+    background-color: #{map-get($colors, 'backgroundColor')};
+    color: #{map-get($colors, 'fontColor')};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.alert {
+  padding: 7px 10px;
+  width: 100%;
+  transition: all 0.2s ease;
+  
+  span {
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 0 10px;
+  }
+
+  .icon-component {
+    display: flex;
+    align-items: center;
+  }
+
+  button {
+    width: 11px;
+    height: 11px;
+    text-align: center;
+    outline: none;
+    background: transparent;
+    color: currentColor;
+  }
+
+  svg {
+    stroke: currentColor;
+  }
+}

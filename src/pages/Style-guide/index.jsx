@@ -6,6 +6,8 @@ import { Badge } from '../../components/Badge';
 import { Hiperlink } from '../../components/Hiperlink';
 import { Input } from '../../components/Form/Input';
 import { Select } from '../../components/Form/Select';
+import { Alert } from '../../components/Alert';
+import { ToggleSwitch } from '../../components/Form/ToggleSwitch';
 
 export function StyleGuide() {
 
@@ -175,6 +177,56 @@ export function StyleGuide() {
               <option value="">RJ</option>
               <option value="">MG</option>
             </Select>
+          </div>
+        </div>
+      </section>
+
+      <section className="container-fluid py-5">
+        <div className="row">
+          <div className="col">
+            <SectionTitle>Alert</SectionTitle>
+            <Alert
+              className="alert-success"
+              text="Example text alert mensagem success"
+              alt="Example text alert mensagem success"
+            />
+            <br />
+
+            <Alert
+              className="alert-warning"
+              text="Example text alert mensagem warning"
+              alt="Example text alert mensagem warning"
+            />
+            <br />
+
+            <Alert
+              className="alert-error"
+              text="Example text alert mensagem error"
+              alt="Example text alert mensagem error"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="container-fluid py-5">
+        <div className="row">
+          <div className="col">
+            <SectionTitle>Toggle Switch</SectionTitle>
+            <ToggleSwitch />
+            <br />
+            <br />
+
+            <ToggleSwitch>Label</ToggleSwitch>
+            <br />
+            <br />
+
+            <ToggleSwitch checked>Active</ToggleSwitch>
+            <br />
+            <br />
+
+            <ToggleSwitch disabled>Disabled</ToggleSwitch>
+            <br />
+            <br />
           </div>
         </div>
       </section>
