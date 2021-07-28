@@ -4,13 +4,14 @@
   width: 46px;
   height: 24px;
 
-  & input { 
+  input { 
     opacity: 0;
     width: 0;
     height: 0;
 
-    &:disabled + &__slider {
+    &:disabled + .switch__slider {
       border-color: $gray-200;
+      
       &::before {
         background-color: $gray-200;
       }

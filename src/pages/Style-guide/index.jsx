@@ -11,13 +11,15 @@ import { ToggleSwitch } from '../../components/Form/ToggleSwitch';
 import { Breadcrumb } from '../../components/Breadcrumb';
 import { Checkbox } from '../../components/Form/Checkbox';
 import { Radio } from '../../components/Form/Radio';
+import { Tooltip } from '../../components/Tooltip';
+import { AlertContent } from '../../components/AlertContent';
 
 export function StyleGuide() {
 
   return (
     <>
       <section className="container-fluid py-5">
-        <div className="row">
+        <div className="row justify-content-between">
           <div className="col">
             <SectionTitle>Tipos de botões</SectionTitle>
 
@@ -64,7 +66,7 @@ export function StyleGuide() {
       </section>
 
       <section className="container-fluid py-5">
-        <div className="row">
+        <div className="row justify-content-between">
           <div className="col">
             <SectionTitle>Loader</SectionTitle>
             <Loader />
@@ -73,7 +75,7 @@ export function StyleGuide() {
       </section>
 
       <section className="container-fluid py-5">
-        <div className="row">
+        <div className="row justify-content-between">
           <div className="col">
             <SectionTitle>Badge</SectionTitle>
             <Badge color="tertiary">Promoção</Badge>
@@ -86,7 +88,7 @@ export function StyleGuide() {
       </section>
 
       <section className="container-fluid py-5">
-        <div className="row">
+        <div className="row justify-content-between">
           <div className="col">
             <SectionTitle>Hiperlink</SectionTitle>
             <Hiperlink size="large">Link Label Large</Hiperlink>
@@ -98,7 +100,7 @@ export function StyleGuide() {
       </section>
 
       <section className="container-fluid py-5">
-        <div className="row">
+        <div className="row justify-content-between">
           <div className="col">
             <SectionTitle>Input</SectionTitle>
             <Input label="Label" placeholder="Teste" />
@@ -158,7 +160,7 @@ export function StyleGuide() {
       </section>
 
       <section className="container-fluid py-5">
-        <div className="row">
+        <div className="row justify-content-between">
           <div className="col">
             <SectionTitle>Input</SectionTitle>
             <Select name="select de teste" message="label">
@@ -185,34 +187,91 @@ export function StyleGuide() {
       </section>
 
       <section className="container-fluid py-5">
-        <div className="row">
+        <div className="row justify-content-between">
           <div className="col">
             <SectionTitle>Alert</SectionTitle>
             <Alert
-              color="alert-success"
-              text="Example text alert mensagem success"
-              alt="Example text alert mensagem success"
-            />
+              color="success"
+              showIcon={false}
+            >
+              Example text alert mensagem success
+            </Alert>
             <br />
 
             <Alert
-              color="alert-warning"
-              text="Example text alert mensagem warning"
-              alt="Example text alert mensagem warning"
-            />
+              color="warning"
+            >
+              Example text alert mensagem warning
+            </Alert>
             <br />
 
             <Alert
-              color="alert-error"
-              text="Example text alert mensagem error"
-              alt="Example text alert mensagem error"
-            />
+              color="lamp"
+            >
+              Example text alert mensagem lamp
+            </Alert>
+            <br />
+
+            <Alert
+              color="info"
+            >
+              Example text alert mensagem info
+            </Alert>
+            <br />
+
+            <Alert
+              color="error"
+            >
+              Example text alert mensagem error
+            </Alert>
           </div>
         </div>
       </section>
 
       <section className="container-fluid py-5">
-        <div className="row">
+        <div className="row justify-content-between">
+          <div className="col">
+            <SectionTitle>Alert Content</SectionTitle>
+            <AlertContent
+              color="success"
+              showIcon={false}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nisl non odio ultricies vehicula. Suspendisse condimentum dictum laoreet. 
+            </AlertContent>
+            <br />
+
+            <AlertContent
+              color="warning"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nisl non odio ultricies vehicula. Suspendisse condimentum dictum laoreet. 
+            </AlertContent>
+            <br />
+
+            <AlertContent
+              color="lamp"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nisl non odio ultricies vehicula. Suspendisse condimentum dictum laoreet. 
+            </AlertContent>
+            <br />
+
+            <AlertContent
+              color="info"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nisl non odio ultricies vehicula. Suspendisse condimentum dictum laoreet. 
+            </AlertContent>
+            <br />
+
+            <AlertContent
+              color="error"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nisl non odio ultricies vehicula. Suspendisse condimentum dictum laoreet. 
+            </AlertContent>
+          </div>
+        </div>
+      </section>
+
+      <section className="container-fluid py-5">
+        <div className="row justify-content-between">
           <div className="col">
             <SectionTitle>Toggle Switch</SectionTitle>
             <ToggleSwitch />
@@ -223,7 +282,7 @@ export function StyleGuide() {
             <br />
             <br />
 
-            <ToggleSwitch checked>Active</ToggleSwitch>
+            <ToggleSwitch defaultChecked>Active</ToggleSwitch>
             <br />
             <br />
 
@@ -235,7 +294,7 @@ export function StyleGuide() {
       </section>
 
       <section className="container-fluid py-5">
-        <div className="row">
+        <div className="row justify-content-between">
           <div className="col">
             <SectionTitle>Breadcrumb</SectionTitle>
             <Breadcrumb list={[
@@ -249,7 +308,7 @@ export function StyleGuide() {
       </section>
 
       <section className="container-fluid py-5">
-        <div className="row">
+        <div className="row justify-content-between">
           <div className="col-12">
             <SectionTitle>Checkbox</SectionTitle>
           </div>
@@ -261,9 +320,9 @@ export function StyleGuide() {
             </Checkbox>
           </div>
           <div className="col-4">
-            <Checkbox id="3" name="checkbox-name1" checked />
+            <Checkbox id="3" name="checkbox-name1" defaultChecked />
             <br />
-            <Checkbox id="4" name="checkbox-name2" checked>
+            <Checkbox id="4" name="checkbox-name2" defaultChecked >
               Label
             </Checkbox>
           </div>
@@ -279,7 +338,36 @@ export function StyleGuide() {
       </section>
 
       <section className="container-fluid py-5">
-        <div className="row">
+        <div className="row justify-content-between">
+          <div className="col-12">
+            <SectionTitle>Tooltips</SectionTitle>
+          </div>
+          <div className="col-2">
+            <Tooltip position="right">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare ipsum lobortis turpis tempor malesuada.
+            </Tooltip>
+          </div>
+          <div className="col-2">
+            <Tooltip position="top">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare ipsum lobortis turpis tempor malesuada.
+            </Tooltip>
+          </div>
+          <div className="col-2">
+            <Tooltip position="bottom">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare ipsum lobortis turpis tempor malesuada.
+            </Tooltip>
+          </div>
+          <div className="col-2">
+            <Tooltip position="left">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare ipsum lobortis turpis tempor malesuada.
+            </Tooltip>
+            <br />
+          </div>
+        </div>
+      </section>
+
+      <section className="container-fluid py-5">
+        <div className="row justify-content-between">
           <div className="col-12">
             <SectionTitle>Radio Button</SectionTitle>
           </div>
@@ -291,9 +379,9 @@ export function StyleGuide() {
             </Radio>
           </div>
           <div className="col-4">
-            <Radio id="radio-button-3" name="radio-button-name2" checked />
+            <Radio id="radio-button-3" name="radio-button-name2" defaultChecked />
             <br />
-            <Radio id="radio-button-4" name="radio-button-name2" checked>
+            <Radio id="radio-button-4" name="radio-button-name2" defaultChecked >
               Label
             </Radio>
           </div>
@@ -307,6 +395,8 @@ export function StyleGuide() {
           </div>
         </div>
       </section>
+
+
     </>
   );
 }

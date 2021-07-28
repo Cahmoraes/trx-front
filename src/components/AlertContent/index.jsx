@@ -5,7 +5,7 @@ import { ReactComponent as IconAlertError } from "../../assets/images/icons/icon
 import { ReactComponent as IconAlertLamp } from "../../assets/images/icons/icon-lamp.svg";
 import { ReactComponent as IconClose } from "../../assets/images/icons/icon-close.svg";
 
-export function Alert({ children, color, showIcon = true }) {
+export function AlertContent({ children, color, showIcon = false }) {
   console.log(color)
   return (
     <div className={`alert alert--${color ? color : ''}`}>
