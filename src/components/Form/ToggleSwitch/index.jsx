@@ -3,7 +3,7 @@ export function ToggleSwitch({ children, ...rest }) {
     <>
       <label className="switch">
         <input type="checkbox" {...rest} />
-        <span className="switch__slider round"></span>
+        <span className="switch__slider switch__slider--rounded"></span>
       </label>
       <span className="switch__label">{children}</span>
     </>

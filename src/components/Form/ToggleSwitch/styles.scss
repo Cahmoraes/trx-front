@@ -45,11 +45,11 @@
       transition: .4s;
     }
 
-    &.round {
+    &--rounded {
       border-radius: 34px;
     }
     
-    &.round:before {
+    &--rounded:before {
       border-radius: 50%;
     }
   }
@@ -61,10 +61,6 @@
   input:checked + &__slider::before {
     background-color: $white;
   }
-  
-  // input:focus + &__slider {
-  //   box-shadow: 0 0 1px #2196F3;
-  // }
   
   input:checked + &__slider:before {
     -webkit-transform: translate3d(23px, 1px, 0);

@@ -8,6 +8,9 @@ import { Input } from '../../components/Form/Input';
 import { Select } from '../../components/Form/Select';
 import { Alert } from '../../components/Alert';
 import { ToggleSwitch } from '../../components/Form/ToggleSwitch';
+import { Breadcrumb } from '../../components/Breadcrumb';
+import { Checkbox } from '../../components/Form/Checkbox';
+import { Radio } from '../../components/Form/Radio';
 
 export function StyleGuide() {
 
@@ -226,6 +229,80 @@ export function StyleGuide() {
 
             <ToggleSwitch disabled>Disabled</ToggleSwitch>
             <br />
+            <br />
+          </div>
+        </div>
+      </section>
+
+      <section className="container-fluid py-5">
+        <div className="row">
+          <div className="col">
+            <SectionTitle>Breadcrumb</SectionTitle>
+            <Breadcrumb list={[
+              { href: "#", link: "Home" },
+              { href: "#", link: "Page 1" },
+              { href: "#", link: "Page 2" },
+              { href: "#", link: "Page 3" },
+            ]} />
+          </div>
+        </div>
+      </section>
+
+      <section className="container-fluid py-5">
+        <div className="row">
+          <div className="col-12">
+            <SectionTitle>Checkbox</SectionTitle>
+          </div>
+          <div className="col-4">
+            <Checkbox id="1" name="checkbox-name" />
+            <br />
+            <Checkbox id="2" name="checkbox-name">
+              Label
+            </Checkbox>
+          </div>
+          <div className="col-4">
+            <Checkbox id="3" name="checkbox-name1" checked />
+            <br />
+            <Checkbox id="4" name="checkbox-name2" checked>
+              Label
+            </Checkbox>
+          </div>
+          <div className="col-4">
+            <Checkbox id="5" name="checkbox-name" disabled />
+            <br />
+            <Checkbox id="6" name="checkbox-name" disabled>
+              Label
+            </Checkbox>
+            <br />
+          </div>
+        </div>
+      </section>
+
+      <section className="container-fluid py-5">
+        <div className="row">
+          <div className="col-12">
+            <SectionTitle>Radio Button</SectionTitle>
+          </div>
+          <div className="col-4">
+            <Radio id="radio-button-1" name="radio-button-name1" />
+            <br />
+            <Radio id="radio-button-2" name="radio-button-name1">
+              Label
+            </Radio>
+          </div>
+          <div className="col-4">
+            <Radio id="radio-button-3" name="radio-button-name2" checked />
+            <br />
+            <Radio id="radio-button-4" name="radio-button-name2" checked>
+              Label
+            </Radio>
+          </div>
+          <div className="col-4">
+            <Radio id="radio-button-5" name="radio-button-name3" disabled />
+            <br />
+            <Radio id="radio-button-6" name="radio-button-name3" disabled>
+              Label
+            </Radio>
             <br />
           </div>
         </div>
