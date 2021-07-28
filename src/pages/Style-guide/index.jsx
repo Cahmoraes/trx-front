@@ -13,6 +13,7 @@ import { Checkbox } from '../../components/Form/Checkbox';
 import { Radio } from '../../components/Form/Radio';
 import { Tooltip } from '../../components/Tooltip';
 import { AlertContent } from '../../components/AlertContent';
+import { Filter } from '../../components/Filter';
 
 export function StyleGuide() {
 
@@ -236,35 +237,35 @@ export function StyleGuide() {
               color="success"
               showIcon={false}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nisl non odio ultricies vehicula. Suspendisse condimentum dictum laoreet. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nisl non odio ultricies vehicula. Suspendisse condimentum dictum laoreet.
             </AlertContent>
             <br />
 
             <AlertContent
               color="warning"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nisl non odio ultricies vehicula. Suspendisse condimentum dictum laoreet. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nisl non odio ultricies vehicula. Suspendisse condimentum dictum laoreet.
             </AlertContent>
             <br />
 
             <AlertContent
               color="lamp"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nisl non odio ultricies vehicula. Suspendisse condimentum dictum laoreet. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nisl non odio ultricies vehicula. Suspendisse condimentum dictum laoreet.
             </AlertContent>
             <br />
 
             <AlertContent
               color="info"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nisl non odio ultricies vehicula. Suspendisse condimentum dictum laoreet. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nisl non odio ultricies vehicula. Suspendisse condimentum dictum laoreet.
             </AlertContent>
             <br />
 
             <AlertContent
               color="error"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nisl non odio ultricies vehicula. Suspendisse condimentum dictum laoreet. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum nisl non odio ultricies vehicula. Suspendisse condimentum dictum laoreet.
             </AlertContent>
           </div>
         </div>
@@ -323,14 +324,14 @@ export function StyleGuide() {
             <Checkbox id="3" name="checkbox-name1" defaultChecked />
             <br />
             <Checkbox id="4" name="checkbox-name2" defaultChecked >
-              Label
+              Label - Checked
             </Checkbox>
           </div>
           <div className="col-4">
             <Checkbox id="5" name="checkbox-name" disabled />
             <br />
             <Checkbox id="6" name="checkbox-name" disabled>
-              Label
+              Disabled
             </Checkbox>
             <br />
           </div>
@@ -389,14 +390,25 @@ export function StyleGuide() {
             <Radio id="radio-button-5" name="radio-button-name3" disabled />
             <br />
             <Radio id="radio-button-6" name="radio-button-name3" disabled>
-              Label
+              Disabled
             </Radio>
             <br />
           </div>
         </div>
       </section>
 
+      <section className="container-fluid py-5">
+        <div className="row justify-content-between">
+          <div className="col">
+            <SectionTitle>Filter</SectionTitle>
+            <Filter tag="Lorem" showIcon />
+            <br />
 
+            <Filter tag="Lorem" />
+            <br />
+          </div>
+        </div>
+      </section>
     </>
   );
 }

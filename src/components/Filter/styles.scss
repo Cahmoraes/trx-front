@@ -1,0 +1,41 @@
+.filter {
+  border: 1px solid $gray-200;
+  padding: 9px 8px;
+  color: $gray-500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  
+  &--applied {
+    color: $primary-300;
+
+    &:hover {
+      font-weight: 700;
+
+      svg {
+        path {
+          stroke: currentColor;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    border-color: $primary-300;
+    color: $primary-300;
+    
+  }
+
+  &__button {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+  }
+
+  svg {
+    fill: currentColor;
+    height: 1.4rem;
+    width: 1.4rem;
+  }
+}
