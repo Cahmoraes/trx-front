@@ -1,0 +1,32 @@
+.c-search {
+  border: 1px solid $gray-200;
+  height: 48px;
+  padding: 16px 12px;
+  display: flex;
+  align-items: center;
+
+  &__input {
+    border: none;
+    color: $gray-400;
+    outline: none;
+    font-size: 1.6rem;
+    width: calc(100% - 24px);
+
+    &:placeholder {
+      color: $gray-400;
+    }
+
+    &:-webkit-autofill {
+      background: transparent;
+    }
+  }
+
+  &__button {
+    border: none;
+    background: transparent;
+    
+    path {
+      fill: $primary-300;
+    }
+  }
+}

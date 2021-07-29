@@ -29,6 +29,10 @@
     &:disabled {
       color: $gray-400;
       background: $gray-200;
+
+      path {
+        fill: $gray-300;
+      }
     }
   }
 
@@ -68,6 +72,10 @@
     &:disabled {
       background: $gray-200;
       color: $gray-400;
+
+      path {
+        fill: $gray-300;
+      }
     }
   }
 

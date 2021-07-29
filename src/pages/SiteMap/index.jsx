@@ -4,7 +4,7 @@ import "./siteMap.scss";
 export function SiteMap() {
   return (
     <div className="sitemap-body">
-      <p className="desc">Sitemapp</p>
+      <p className="desc">Sitemap</p>
       <div className="content">
         <div>
           <ul>
@@ -17,7 +17,7 @@ export function SiteMap() {
           <h3>Pages</h3>
           <ul>
             <li>
-              <Link to="/Home" target="_blank">
+              <Link to="/home" target="_blank">
                 Home
               </Link>
             </li>

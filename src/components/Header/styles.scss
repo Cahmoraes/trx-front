@@ -1,3 +1,20 @@
-#header {
-  background: red;
+.l-header {
+  display: flex;
+  align-items: center;
+
+  &__user-menu {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    button {
+      background: transparent;
+      border: none;
+    }
+
+    button + button {
+      margin-left: 26px;
+    }
+  }
 }
