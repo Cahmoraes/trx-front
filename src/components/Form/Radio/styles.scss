@@ -1,4 +1,4 @@
-.radio {
+.c-radio {
   label {
     display: flex;
     align-items: center;
@@ -9,7 +9,7 @@
   &__button {
     display: none;
 
-    &:checked ~ .radio__checkmark {
+    &:checked ~ .c-radio__checkmark {
       position: relative;
 
       &::before {
@@ -26,12 +26,12 @@
       }
     }
 
-    &:disabled ~ .radio__checkmark {
+    &:disabled ~ .c-radio__checkmark {
       border-color: $gray-200;
       cursor: default;
     }
 
-    &:disabled ~ .radio__text {
+    &:disabled ~ .c-radio__text {
       color: $gray-300;
       cursor: default;
     }

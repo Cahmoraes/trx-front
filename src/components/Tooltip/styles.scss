@@ -1,11 +1,14 @@
-.tooltip {
+.c-tooltip {
   position: relative;
-  width: 20px;
-  height: 20px;
   overflow: hidden;
   cursor: pointer;
   font-size: 1.2rem;
   line-height: 1.8rem;
+
+  &, & > svg {
+    width: 20px;
+    height: 20px;
+  }
 
   &--is-right {
     span {

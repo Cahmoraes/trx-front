@@ -27,14 +27,14 @@ $storage-colors: (
 );
 
 @each $keyColors, $colors in $storage-colors {
-  .alert.alert--#{$keyColors} {
+  .c-alert-content.c-alert-content--#{$keyColors} {
     background-color: #{map-get($colors, 'backgroundColor')};
     color: #{map-get($colors, 'fontColor')};
     border: #{map-get($colors, 'borderColor')};
   }
 }
 
-.alert {
+.c-alert-content {
   padding: 7px 10px;
   width: 100%;
   transition: all 0.2s ease;
@@ -63,9 +63,12 @@ $storage-colors: (
     align-self: flex-start;
   }
 
+  &__icon, &__icon svg {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+
   button {
-    width: 11px;
-    height: 11px;
     text-align: center;
     outline: none;
     background: transparent;

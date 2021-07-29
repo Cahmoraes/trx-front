@@ -1,0 +1,21 @@
+.c-slider-arrow {
+  background: $gray-100;
+  border: none;
+  height: 125px;
+  width: 48px;
+  opacity: 0.5;
+
+  &:hover:not(&:disabled) {
+    opacity: initial;
+  }
+
+  &:disabled {
+    svg {
+      stroke: $gray-300;  
+    }
+  }
+
+  svg {
+    stroke: $primary-300;
+  }
+}

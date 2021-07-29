@@ -1,4 +1,4 @@
-.filter {
+.c-filter {
   border: 1px solid $gray-200;
   padding: 9px 8px;
   color: $gray-500;
@@ -14,9 +14,13 @@
       font-weight: 700;
 
       svg {
-        path {
-          stroke: currentColor;
-        }
+        stroke-width: 2;
+      }
+    }
+    
+    svg {
+      path {
+        stroke: $primary-300;
       }
     }
   }
@@ -24,7 +28,6 @@
   &:hover {
     border-color: $primary-300;
     color: $primary-300;
-    
   }
 
   &__button {
@@ -34,7 +37,7 @@
   }
 
   svg {
-    fill: currentColor;
+    fill: $primary-300;
     height: 1.4rem;
     width: 1.4rem;
   }

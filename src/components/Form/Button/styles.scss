@@ -1,17 +1,26 @@
-.btn {
+.c-button {
   width: 100%;
   height: 44px;
   font-weight: 700;
   border: none;
+  font-size: 1.6rem;
   justify-content: center;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   transition: all 200ms ease;
 
+  path {
+    fill: $primary-300;
+  }
+
   &.primary {
     color: $white;
     background: $primary-300;
+    
+    path {
+      fill: $white;
+    }
 
     &:hover {
       background-color: $primary-400;
@@ -31,12 +40,20 @@
     &:hover {
       background: $primary-300;
       color: $white;
+
+      path {
+        fill: $white;
+      }
     }
 
     &:disabled {
       background: $white;
       border: 1px solid $gray-300;
       color: $gray-300;
+
+      path {
+        fill: $gray-300;
+      }
     }
   }
 
@@ -54,14 +71,14 @@
     }
   }
 
-  img {
-    width: 24px;
-    height: 24px;
-    margin-right: 4px;
-    object-fit: contain;
-  }
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
 
-  svg {
-    stroke: currentColor;
+    &--small {
+      width: 14px;
+      height: 14px;
+    }
   }
 }

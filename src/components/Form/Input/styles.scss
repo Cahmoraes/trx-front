@@ -1,4 +1,4 @@
-.form-group {
+.c-input {
   position: relative;
 
   &__label {
@@ -12,7 +12,7 @@
     background-color: transparent;
     position: absolute;
     right: 10px;
-    top: 39px;
+    top: 38px;
   }
 
   &__input {
@@ -48,16 +48,16 @@
     }
   }
 
-  .form-component {
-    display: flex;
+  &__message {
+    display: flex;  
     justify-content: flex-start;
     margin-top: 8px;
+  }
 
-    &__msg-error {
-      color: $error-200;
-      font-weight: 400;
-      background: url("../../../assets/images/icons/information.svg") no-repeat left;
-      padding-left: 16px;
-    }
+  &__text-error {
+    color: $error-200;
+    font-weight: 400;
+    background: url("../../../assets/images/icons/information.svg") no-repeat left;
+    padding-left: 16px;
   }
 }

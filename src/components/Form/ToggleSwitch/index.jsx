@@ -1,11 +1,11 @@
 export function ToggleSwitch({ children, ...rest }) {
   return (
     <>
-      <label className="switch">
+      <label className="c-switch">
         <input type="checkbox" {...rest} />
-        <span className="switch__slider switch__slider--rounded"></span>
+        <span className="c-switch__slider c-switch__slider--rounded"></span>
       </label>
-      <span className="switch__label">{children}</span>
+      <span className="c-switch__label">{children}</span>
     </>
   )
 }

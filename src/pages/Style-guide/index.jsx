@@ -1,6 +1,5 @@
 import { SectionTitle } from "./components/SectionTitle";
 import { Button } from "../../components/Form/Button";
-import { ReactComponent as IconxWhite } from "../../assets/images/icons/arrow-white.svg";
 import { Loader } from '../../components/Loader';
 import { Badge } from '../../components/Badge';
 import { Hiperlink } from '../../components/Hiperlink';
@@ -14,6 +13,7 @@ import { Radio } from '../../components/Form/Radio';
 import { Tooltip } from '../../components/Tooltip';
 import { AlertContent } from '../../components/AlertContent';
 import { Filter } from '../../components/Filter';
+import { SliderArrow } from '../../components/SliderArrow';
 
 export function StyleGuide() {
 
@@ -40,6 +40,14 @@ export function StyleGuide() {
             </Button>
             <br />
 
+            <Button color="secondary" disabled showIcon>
+              Secondary disabled
+            </Button>
+            <br />
+
+            <Button color="secondary" showIcon>Secondary</Button>
+            <br />
+
             <Button color="tertiary">Tertiary</Button>
             <br />
 
@@ -48,19 +56,15 @@ export function StyleGuide() {
             </Button>
             <br />
 
-            <Button color="primary">
-              <IconxWhite className="mr-3" /> Button
+            <Button color="primary" showIcon>
+              Button
             </Button>
             <br />
 
-            <Button color="primary">
-              <IconxWhite />
-            </Button>
+            <Button color="primary" showIcon />
             <br />
 
-            <Button color="primary" disabled>
-              <IconxWhite />
-            </Button>
+            <Button color="primary" showIcon disabled />
             <br />
           </div>
         </div>
@@ -163,7 +167,7 @@ export function StyleGuide() {
       <section className="container-fluid py-5">
         <div className="row justify-content-between">
           <div className="col">
-            <SectionTitle>Input</SectionTitle>
+            <SectionTitle>Select</SectionTitle>
             <Select name="select de teste" message="label">
               <option value="">SP</option>
               <option value="">RJ</option>
@@ -403,9 +407,30 @@ export function StyleGuide() {
             <SectionTitle>Filter</SectionTitle>
             <Filter tag="Lorem" showIcon />
             <br />
-
             <Filter tag="Lorem" />
             <br />
+          </div>
+        </div>
+      </section>
+
+      <section className="container-fluid py-5">
+        <div className="row justify-content-between">
+          <div className="col">
+            <SectionTitle>Slider Arrow</SectionTitle>
+            <div className="row">
+              <div className="col-3">
+                <SliderArrow sense="left" />
+              </div>
+              <div className="col-3">
+                <SliderArrow sense="right" />
+              </div>
+              <div className="col-3">
+                <SliderArrow disabled sense="left" />
+              </div>
+              <div className="col-3">
+                <SliderArrow disabled sense="right" />
+              </div>
+            </div>
           </div>
         </div>
       </section>

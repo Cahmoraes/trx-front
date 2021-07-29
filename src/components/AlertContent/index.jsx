@@ -1,23 +1,22 @@
-import { ReactComponent as IconAlertSuccess } from "../../assets/images/icons/icon-success.svg";
-import { ReactComponent as IconAlertWarning } from "../../assets/images/icons/icon-warning.svg";
-import { ReactComponent as IconAlertInfo } from "../../assets/images/icons/icon-info.svg";
-import { ReactComponent as IconAlertError } from "../../assets/images/icons/icon-error.svg";
-import { ReactComponent as IconAlertLamp } from "../../assets/images/icons/icon-lamp.svg";
-import { ReactComponent as IconClose } from "../../assets/images/icons/icon-close.svg";
+import { ReactComponent as IconAlertSuccess } from "../../assets/images/icons/success.svg";
+import { ReactComponent as IconAlertWarning } from "../../assets/images/icons/warning.svg";
+import { ReactComponent as IconAlertInfo } from "../../assets/images/icons/info.svg";
+import { ReactComponent as IconAlertInvalid } from "../../assets/images/icons/invalid.svg";
+import { ReactComponent as IconAlertLamp } from "../../assets/images/icons/lamp.svg";
+import { ReactComponent as IconClose } from "../../assets/images/icons/close.svg";
 
 export function AlertContent({ children, color, showIcon = false }) {
-  console.log(color)
   return (
-    <div className={`alert alert--${color ? color : ''}`}>
-      <div className="alert__content">
-        <div className="alert__icon">
+    <div className={`c-alert-content c-alert-content--${color ? color : ''}`}>
+      <div className="c-alert-content__content">
+        <div className="c-alert-content__icon">
           {color === "warning" && (
             <IconAlertWarning
               className="icon-alert icon-warning"
             />
           )}
           {color === "error" && (
-            <IconAlertError
+            <IconAlertInvalid
               className="icon-alert icon-error"
             />
           )}
@@ -41,7 +40,7 @@ export function AlertContent({ children, color, showIcon = false }) {
       </div>
       {
         showIcon && (
-          <button className="btn">
+          <button>
             <IconClose />
           </button>
         )

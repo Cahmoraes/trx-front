@@ -1,4 +1,4 @@
-.checkbox {
+.c-checkbox {
   
   &__label {
     display: flex;
@@ -10,7 +10,7 @@
   &__input {
     display: none;
 
-    &:checked ~ .checkbox__checkmark {
+    &:checked ~ .c-checkbox__checkmark {
       background-color: $primary-300;
       position: relative;
 
@@ -28,13 +28,13 @@
       }
     }
 
-    &:disabled ~ .checkbox__checkmark {
+    &:disabled ~ .c-checkbox__checkmark {
       background-color: white;
       border-color: $gray-200;
       cursor: default;
     }
 
-    &:disabled ~ .checkbox__text {
+    &:disabled ~ .c-checkbox__text {
       color: $gray-300;
       cursor: default;
     }

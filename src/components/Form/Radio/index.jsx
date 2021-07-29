@@ -1,11 +1,11 @@
 export function Radio({ id, name, children, ...rest }) {
   return (
-    <div className="radio">
+    <div className="c-radio">
       <label htmlFor={id}>
-        <input className="radio__button" type="radio" id={id} name={name} value={children} {...rest} />
-        <span className="radio__checkmark"></span>
+        <input className="c-radio__button" type="radio" id={id} name={name} value={children} {...rest} />
+        <span className="c-radio__checkmark"></span>
         {children && (
-          <span className="radio__text">{children}</span>
+          <span className="c-radio__text">{children}</span>
         )}
       </label>
     </div>
