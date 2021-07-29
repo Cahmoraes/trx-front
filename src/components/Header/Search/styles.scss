@@ -5,12 +5,22 @@
   display: flex;
   align-items: center;
 
+  @include device(sm) {
+    border: none;
+    height: auto;
+    padding: 0;
+  }
+
   &__input {
     border: none;
     color: $gray-400;
     outline: none;
     font-size: 1.6rem;
     width: calc(100% - 24px);
+
+    @include device(sm) {
+      display: none;
+    }
 
     &:placeholder {
       color: $gray-400;

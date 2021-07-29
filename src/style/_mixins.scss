@@ -5,17 +5,17 @@
     }
   }
   @else if $device == lg {
-    @media screen and (min-width: $lg) {
+    @media screen and (min-width: $lg) and (max-width: $xl - 1) {
       @content;
     }
   }
   @else if $device == md {
-    @media screen and (min-width: $md) {
+    @media screen and (min-width: $md) and (max-width: $lg - 1) {
       @content;
     }
   }
   @else if $device == sm {
-    @media screen and (min-width: $sm) {
+    @media screen and (max-width: $md - 1) {
       @content;
     }
   }

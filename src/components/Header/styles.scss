@@ -1,9 +1,33 @@
 .l-header {
   display: flex;
   align-items: center;
+  padding-top: 36px;
+
+  &__logo {
+    min-width: 120px;
+    min-height: 37.6px;
+
+    @include device(sm) {
+      order: -1;
+    }
+  }
+
+  &__search-desk {
+
+    @include device(sm) {
+      display: none;
+    }
+  }
+
+  &__search-mobile {
+    display: none;
+
+    @include device(sm) {
+      display: block;
+    }
+  }
 
   &__user-menu {
-
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -16,5 +40,41 @@
     button + button {
       margin-left: 26px;
     }
+  }
+
+  &__menu-navigation-mobile {
+    display: none;
+    order: -2;
+    
+    button {
+      background: transparent;
+      border: none;  
+    }
+
+    @include device(sm) {
+      display: block;
+    }
+  }
+
+  &__menu-navigation-desk {
+    margin-top: 36px;
+
+    @include device(sm) {
+      display: none;
+    }
+
+    @include device(md) {
+      display: none;
+    }
+  }
+
+  &__userIcon {
+    @include device(sm) {
+      display: none;
+    }
+  }
+
+  &__cartIcon {
+    
   }
 }
