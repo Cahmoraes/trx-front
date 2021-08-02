@@ -3,6 +3,12 @@
   align-items: center;
   padding-top: 36px;
 
+  @include device(sm) {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+    padding-bottom: 22px;
+    padding-top: 22px;
+  }
+
   &__logo {
     min-width: 120px;
     min-height: 37.6px;
@@ -17,12 +23,20 @@
     @include device(sm) {
       display: none;
     }
+
+    @include device(md) {
+      display: none;
+    }
   }
 
   &__search-mobile {
     display: none;
 
     @include device(sm) {
+      display: block;
+    }
+
+    @include device(md) {
       display: block;
     }
   }
@@ -54,6 +68,10 @@
     @include device(sm) {
       display: block;
     }
+
+    @include device(md) {
+      display: block;
+    }
   }
 
   &__menu-navigation-desk {
@@ -69,7 +87,12 @@
   }
 
   &__userIcon {
+    
     @include device(sm) {
+      display: none;
+    }
+
+    @include device(md) {
       display: none;
     }
   }

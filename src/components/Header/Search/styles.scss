@@ -11,6 +11,12 @@
     padding: 0;
   }
 
+  @include device(md) {
+    border: none;
+    height: auto;
+    padding: 0;
+  }
+
   &__input {
     border: none;
     color: $gray-400;
@@ -19,6 +25,10 @@
     width: calc(100% - 24px);
 
     @include device(sm) {
+      display: none;
+    }
+
+    @include device(md) {
       display: none;
     }
 

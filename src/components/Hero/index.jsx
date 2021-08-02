@@ -19,11 +19,11 @@ export function Hero() {
 
       <div className="l-hero__control-container">
         <ul>
-          <li><a href="/">&nbsp;</a></li>
-          <li><a href="/">&nbsp;</a></li>
-          <li><a href="/">&nbsp;</a></li>
-          <li><a href="/">&nbsp;</a></li>
-          <li><a href="/">&nbsp;</a></li>
+          <li><a className="l-hero__control-item l-hero__control-item--is-active" href="/">&nbsp;</a></li>
+          <li><a className="l-hero__control-item" href="/">&nbsp;</a></li>
+          <li><a className="l-hero__control-item" href="/">&nbsp;</a></li>
+          <li><a className="l-hero__control-item" href="/">&nbsp;</a></li>
+          <li><a className="l-hero__control-item" href="/">&nbsp;</a></li>
         </ul>
       </div>
 

@@ -21,10 +21,13 @@
   }
 
   &__control-container {
-    border: 1px solid;
     position: absolute;
     width: 100%;
     bottom: 4%;
+
+    @include device(sm) {
+      bottom: 0;
+    }
 
     ul {
       display: flex;
@@ -32,21 +35,25 @@
       justify-content: center;
     }
 
-    a {
-      display: block;
-      width: 12px;
-      height: 12px;
-      background: $gray-200;
-      border-radius: 50%;
-      transition: .2s ease;
-
-      &:hover {
-        background: $primary-300;
-      }
-    }
-
     li + li {
       margin-left: 1.6rem;
+    }
+  }
+
+  &__control-item {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: $gray-200;
+    border-radius: 50%;
+    transition: .2s ease;
+
+    &:hover {
+      background: $primary-300;
+    }
+    
+    &--is-active {
+      background: $primary-300;
     }
   }
 }
