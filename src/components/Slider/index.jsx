@@ -4,9 +4,11 @@ import { ReactComponent as ArrowRight } from '../../assets/images/icons/arrow-la
 export function Slider({ title, items }) {
   return (
     <div className="l-slider">
-      {title && (
-        <h2 className="l-slider__title">{title}</h2>
-      )}
+      {
+        title && (
+          <h2 className="l-slider__title">{title}</h2>
+        )
+      }
       <div className="l-slider__container">
         {
           items.map(item => (
@@ -16,10 +18,17 @@ export function Slider({ title, items }) {
                 {item.title}
               </h3>
               <div className="l-slider__container-price">
-                {item.oldPrice && (
-                  <span className="l-slider__oldPrice">{`de ${item.oldPrice}`}</span>
-                )}
-                <span className="l-slider__price">{`${item.oldPrice ? 'por ' : ' '} ${item.price}`}</span>
+                {
+                  item.oldPrice && (
+                    <span className="l-slider__oldPrice">{`de ${item.oldPrice}`}</span>
+                  )}
+                {
+                  item.price && (
+                    <span className="l-slider__price">
+                      {`${item.oldPrice ? 'por ' : ' '} ${item.price}`}
+                    </span>
+                  )
+                }
               </div>
             </a>
           ))
