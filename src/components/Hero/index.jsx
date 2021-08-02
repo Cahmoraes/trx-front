@@ -14,7 +14,7 @@ export function Hero() {
 
       <div className="l-hero__arrow-container">
         <SliderArrow />
-        <SliderArrow sense="right" />
+        <SliderArrow direction="right" />
       </div>
 
       <div className="l-hero__control-container">

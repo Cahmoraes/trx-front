@@ -419,16 +419,16 @@ export function StyleGuide() {
             <SectionTitle>Slider Arrow</SectionTitle>
             <div className="row">
               <div className="col-3">
-                <SliderArrow sense="left" />
+                <SliderArrow direction="left" />
               </div>
               <div className="col-3">
-                <SliderArrow sense="right" />
+                <SliderArrow direction="right" />
               </div>
               <div className="col-3">
-                <SliderArrow disabled sense="left" />
+                <SliderArrow disabled direction="left" />
               </div>
               <div className="col-3">
-                <SliderArrow disabled sense="right" />
+                <SliderArrow disabled direction="right" />
               </div>
             </div>
           </div>

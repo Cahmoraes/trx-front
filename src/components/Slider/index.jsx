@@ -1,58 +1,49 @@
+import { ReactComponent as ArrowLeft } from '../../assets/images/icons/arrow-large-left.svg'
+import { ReactComponent as ArrowRight } from '../../assets/images/icons/arrow-large-right.svg'
 
-
-import Slick from "react-slick"
-
-export function Slider({ title = 'Title', items }) {
-
-  const settings = {
-    infinite: false,
-    speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          dots: true
-        }
-      }
-    ]
-  }
-
+export function Slider({ title, items }) {
   return (
     <div className="l-slider">
-      <h2 className="l-slider__title">{title}</h2>
-      <Slick {...settings}>
+      {title && (
+        <h2 className="l-slider__title">{title}</h2>
+      )}
+      <div className="l-slider__container">
         {
           items.map(item => (
-            <a href="/" key={item.title}>
+            <a className="l-slider__item" href="/" key={item.title}>
               <img src={item.image} alt={item.title} />
               <h3 className="l-slider__item-title">
                 {item.title}
               </h3>
+              <div className="l-slider__container-price">
+                {item.oldPrice && (
+                  <span className="l-slider__oldPrice">{`de ${item.oldPrice}`}</span>
+                )}
+                <span className="l-slider__price">{`${item.oldPrice ? 'por ' : ' '} ${item.price}`}</span>
+              </div>
             </a>
           ))
         }
-      </Slick>
+      </div>
+
+      <div className="l-slider__arrow-container">
+        <button className="l-slider__arrow l-slider__arrow--is-disabled">
+          <ArrowLeft />
+        </button>
+        <button className="l-slider__arrow">
+          <ArrowRight />
+        </button>
+      </div>
+
+      <div className="l-slider__control-container">
+        <ul>
+          <li><a className="l-slider__control-item l-slider__control-item--is-active" href="/">&nbsp;</a></li>
+          <li><a className="l-slider__control-item" href="/">&nbsp;</a></li>
+          <li><a className="l-slider__control-item" href="/">&nbsp;</a></li>
+          <li><a className="l-slider__control-item" href="/">&nbsp;</a></li>
+          <li><a className="l-slider__control-item" href="/">&nbsp;</a></li>
+        </ul>
+      </div>
     </div>
   )
 }

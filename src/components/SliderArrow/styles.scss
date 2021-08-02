@@ -1,9 +1,12 @@
 .c-slider-arrow {
-  background: $gray-100;
   border: none;
   height: 125px;
   width: 48px;
   opacity: 0.5;
+  
+  &.is-background {
+    background: $gray-100;
+  }
 
   &:hover:not(&:disabled) {
     opacity: initial;
