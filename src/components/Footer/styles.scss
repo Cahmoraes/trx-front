@@ -101,4 +101,55 @@
     }
   }
 
+  &__pagamento {
+
+    @include device(md) {
+      margin-top: 40px;
+    }
+
+    @include device(sm) {
+      margin-top: 40px;
+    }
+
+    &-icons {
+      display: flex;
+      align-items: center;
+
+      svg {
+        path {
+          fill: $gray-500;
+        }
+      }
+
+      svg + svg {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &__seguranca {
+    
+    @include device(md) {
+      order: -1;
+    }
+
+    @include device(sm) {
+      order: -1;
+    }
+
+    &-images {
+      display: flex;
+    }
+
+    img + img {
+      margin-left: 8px;
+    }
+  }
+
+  &__pagamento-texto, &__seguranca-texto {
+    color: $primary-400;
+    font-weight: 500;
+    line-height: 2.4rem;
+    margin-bottom: 16px;
+  }
 }
