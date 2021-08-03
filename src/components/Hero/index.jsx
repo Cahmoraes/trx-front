@@ -6,14 +6,18 @@ export function Hero() {
   return (
     <div className="l-hero">
 
-      <picture className="l-hero__banner">
-        <source media="(min-width:650px)" srcSet={bannerJPG} />
-        <source media="(min-width:0)" srcSet={bannerMobileJPG} />
-        <img src={bannerJPG} alt={bannerJPG} />
-      </picture>
+      <a href="/">
+        <picture className="l-hero__banner">
+          <source media="(min-width:650px)" srcSet={bannerJPG} />
+          <source media="(min-width:0)" srcSet={bannerMobileJPG} />
+          <img src={bannerJPG} alt={bannerJPG} />
+        </picture>
+      </a>
 
-      <div className="l-hero__arrow-container">
+      <div className="l-hero__arrow-left">
         <SliderArrow />
+      </div>
+      <div className="l-hero__arrow-right">
         <SliderArrow direction="right" />
       </div>
 

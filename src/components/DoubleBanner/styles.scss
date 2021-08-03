@@ -1,0 +1,9 @@
+.l-double-banner {
+  display: flex;
+  justify-content: space-between;
+
+  &__container + &__container {
+    display: block;
+    margin-left: 8px;
+  }
+}

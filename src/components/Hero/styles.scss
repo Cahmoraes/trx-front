@@ -10,14 +10,18 @@
     }
   }
 
-  &__arrow-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  &__arrow-left, &__arrow-right {
     position: absolute;
     z-index: 10;
-    width: 100%;
     top: calc(50% - 55px);
+  }
+
+  &__arrow-left {
+    left: 0;
+  }
+
+  &__arrow-right {
+    right: 0;
   }
 
   &__control-container {

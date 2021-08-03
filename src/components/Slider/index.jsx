@@ -1,9 +1,9 @@
 import { ReactComponent as ArrowLeft } from '../../assets/images/icons/arrow-large-left.svg'
 import { ReactComponent as ArrowRight } from '../../assets/images/icons/arrow-large-right.svg'
 
-export function Slider({ title, items }) {
+export function Slider({ title, items, category = false }) {
   return (
-    <div className="l-slider">
+    <div className={`l-slider ${category ? 'l-slider--category':''}`}>
       {
         title && (
           <h2 className="l-slider__title">{title}</h2>

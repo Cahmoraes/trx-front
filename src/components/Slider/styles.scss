@@ -1,6 +1,36 @@
 .l-slider {
   position: relative;
 
+  &--category {
+    
+    .l-slider__item {
+      flex: 0 0 150px;
+      height: auto;
+      text-align: center;
+      width: 100%;
+      max-width: 150px;
+      
+      @include device(sm) {
+        box-shadow: none;
+      }
+    }
+
+    .l-slider__item + .l-slider__item {
+      margin-left: 10px;
+    }
+    
+    .l-slider__item-title {
+      font-size: 2.4rem;
+      font-weight: 500;
+      line-height: 3.6rem;
+      margin-top: 8px;
+    }
+
+    .l-slider__arrow-container {
+      top: 138px;
+    }
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
