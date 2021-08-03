@@ -38,9 +38,12 @@ import banner3JPG from '../../assets/images/banner-3.jpg'
 import banner3MobileJPG from '../../assets/images/banner-3-mobile.jpg'
 import banner4JPG from '../../assets/images/banner-4.jpg'
 import banner4MobileJPG from '../../assets/images/banner-4-mobile.jpg'
+import { NewsLetter } from '../../components/Newsletter'
+import { Footer } from '../../components/Footer'
 
 const bannersConfig = [
   {
+    id: 0,
     alt: "banner 1",
     url: '/',
     images: [
@@ -55,6 +58,7 @@ const bannersConfig = [
     ]
   },
   {
+    id: 1,
     alt: "banner 2",
     url: '/',
     images: [
@@ -285,6 +289,8 @@ export function Home() {
         </div>
       </div>
 
+      <NewsLetter />
+      <Footer />
     </>
   );
 }

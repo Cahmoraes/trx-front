@@ -1,0 +1,61 @@
+.l-newsletter {
+  background: $gray-100;
+  padding: 40px 0;
+  font-size: 1.6rem;
+
+  &__container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+
+    @include device(md) {
+      max-width: calc(#{$md} - 32px);
+    }
+
+    @include device(sm) {
+      max-width: calc(#{$sm} - 32px);
+    }
+  }
+
+  @include device(sm) {
+    padding: 32px 0;
+  }
+
+  &__text-assine {
+    color: $gray-300;
+    margin-bottom: 8px;
+  }
+
+  &__button-assine {
+
+    @include device(sm) {
+      margin-bottom: 35px;
+    }
+
+    @include device(md) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__input-box {
+
+    @include device(sm) {
+      margin-bottom: 20px;
+    }
+
+    @include device(md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__button-cadastrar {
+
+    @include device(sm) {
+      margin-top: 4px;
+    }
+
+    @include device(md) {
+      margin-top: 4px;
+    }
+  }
+}
