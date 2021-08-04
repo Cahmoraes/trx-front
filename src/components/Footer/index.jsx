@@ -3,6 +3,7 @@ import { ReactComponent as EmailIcon } from '../../assets/images/icons/email.svg
 import { ReactComponent as FacebookIcon } from '../../assets/images/icons/facebook.svg'
 import { ReactComponent as InstagramIcon } from '../../assets/images/icons/instagram.svg'
 import { ReactComponent as TwitterIcon } from '../../assets/images/icons/twitter.svg'
+import { ReactComponent as LogoSvg } from '../../assets/images/icons/logo.svg'
 import siteBlindadoPNG from '../../assets/images/site-blindado.png'
 import ambienteSeguroPNG from '../../assets/images/ambiente-seguro.png'
 
@@ -116,6 +117,22 @@ export function Footer() {
               <img src={siteBlindadoPNG} alt="Site Blindado" />
               <img src={ambienteSeguroPNG} alt="Ambiente Seguro" />
             </div>
+          </div>
+        </div>
+
+      </div>
+      <div className="l-footer__bottom">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-12 col-lg-6 offset-lg-1 align-items-center l-footer__bottom-logo">
+              <LogoSvg />
+              <p className="col-sm-12">
+                @ 2020 TRX. Todos os direitos reservados.
+              </p>
+            </div>
+            <p className="col-md-12 col-lg-5 l-footer__bottom-address">
+              AVENIDA BENTO TRX, 100 - VOLTA PEQUENA - CANOAS, RS, CEP: 95180-052, BRASIL
+            </p>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 .l-footer  {
   background: $gray-100;
-  padding: 10px 0;
+  padding-top: 10px;
   
   &__items {
     display: grid;
@@ -151,5 +151,68 @@
     font-weight: 500;
     line-height: 2.4rem;
     margin-bottom: 16px;
+  }
+
+  &__bottom {
+    margin-top: 40px;
+    font-size: 1.2rem;
+    background: linear-gradient(124.04deg, #58006D 0%, #BD54D7 100%);
+    padding: 16px 0;
+    color: $white;
+
+    @include device(md) {
+      padding: 24px 0;
+    }
+
+    @include device(sm) {
+      padding: 24px 0;
+    }
+
+    &-logo {
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      display: flex;
+
+      @include device(md) {
+        text-align: center;
+        margin-top: 20px;
+        display: block;
+
+        p {
+          margin-top: 24px;
+        }
+      }
+
+      @include device(sm) {
+        text-align: center;
+        margin-top: 20px;
+        display: block;
+        p {
+          margin-top: 24px;
+        }
+      }
+    }
+
+    svg {
+      min-width: 100px;
+      path {
+        fill: $white;
+      }
+    }
+
+    &-address {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+
+      @include device(md) {
+        text-align: center;
+        margin-top: 16px;
+      }
+
+      @include device(sm) {
+        text-align: center;
+        margin-top: 16px;
+      }
+    }
   }
 }
