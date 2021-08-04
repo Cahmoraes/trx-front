@@ -30,7 +30,7 @@ export function Header() {
               <Search />
             </div>
 
-            <div className="col-1 col-md-3 l-header__user-menu">
+            <div className="col-1 l-header__user-menu">
               <div className="l-header__search-mobile">
                 <Search />
               </div>

@@ -39,7 +39,6 @@ import banner3MobileJPG from '../../assets/images/banner-3-mobile.jpg'
 import banner4JPG from '../../assets/images/banner-4.jpg'
 import banner4MobileJPG from '../../assets/images/banner-4-mobile.jpg'
 import { NewsLetter } from '../../components/Newsletter'
-import { Footer } from '../../components/Footer'
 
 const bannersConfig = [
   {
@@ -290,7 +289,6 @@ export function Home() {
       </div>
 
       <NewsLetter />
-      <Footer />
     </>
   );
 }

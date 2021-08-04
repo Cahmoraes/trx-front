@@ -8,13 +8,13 @@
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  transition: all 200ms ease;
+  transition: all 300ms ease;
 
   path {
     fill: $primary-300;
   }
 
-  &.primary {
+  &--primary {
     color: $white;
     background: $primary-300;
     
@@ -36,7 +36,7 @@
     }
   }
 
-  &.secondary {
+  &--secondary {
     background: $white;
     color: $primary-400;
     border: 1px solid $primary-400;
@@ -61,7 +61,7 @@
     }
   }
 
-  &.tertiary {
+  &--tertiary {
     color: $white;
     background: $secondary-100;
 

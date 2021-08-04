@@ -5,6 +5,7 @@
     font-size: 1.4rem;
     line-height: 1.4rem;
     color: $gray-500;
+    font-weight: 500;
   }
 
   .has-icon {
@@ -56,8 +57,10 @@
 
   &__text-error {
     color: $error-200;
+    font-size: 1.2rem;
     font-weight: 400;
     background: url("../../../assets/images/icons/information.svg") no-repeat left;
     padding-left: 16px;
+    background-position: initial;
   }
 }

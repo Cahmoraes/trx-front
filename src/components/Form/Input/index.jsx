@@ -25,7 +25,6 @@ export function Input({
   ...rest
 }) {
 
-
   const [isFilled, setIsFilled] = useState(false)
 
   function handleFilled({ target }) {
@@ -52,13 +51,13 @@ export function Input({
 
         {showIcon && (
           <button className="has-icon">
-            {iconTypes('notVisible')}
+            {iconTypes(iconType)}
           </button>
         )}
 
-        {link && (
+        {message && (
           <div className="c-input__message">
-            {color && (
+            {color === 'error' && (
               <span className={`c-input__text-${color}`}>{message}</span>
             )}
           </div>

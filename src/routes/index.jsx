@@ -1,15 +1,17 @@
 import { Switch } from 'react-router-dom'
+import { Route } from './Route'
 import { Home } from '../pages/Home'
+import { Login } from '../pages/Login'
 import { SiteMap } from '../pages/SiteMap'
 import { StyleGuide } from '../pages/Style-guide'
-import {Route} from './Route'
 
 export function Routes() {
   return (
     <Switch>
-      <Route exact path="/" component={SiteMap} />
-      <Route path="/style-guide" component={StyleGuide} />
+      <Route exact path="/" hasHeader={false} hasFooter={false} component={SiteMap} />
+      <Route path="/style-guide" hasHeader={false} hasFooter={false} component={StyleGuide} />
       <Route path="/home" component={Home} />
+      <Route path="/login" component={Login} />
     </Switch>
   )
 }

@@ -121,18 +121,19 @@ export function Footer() {
         </div>
 
       </div>
+      
       <div className="l-footer__bottom">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-md-12 col-lg-6 offset-lg-1 align-items-center l-footer__bottom-logo">
-              <LogoSvg />
-              <p className="col-sm-12">
-                @ 2020 TRX. Todos os direitos reservados.
+            <div className="col-sm-12 col-lg-10 offset-lg-1 l-footer__bottom-container">
+              <div className="l-footer__bottom-logo">
+                <LogoSvg />
+                <p>@ 2020 TRX. Todos os direitos reservados.</p>
+              </div>
+              <p className="l-footer__bottom-address">
+                AVENIDA BENTO TRX, 100 - VOLTA PEQUENA - CANOAS, RS, CEP: 95180-052, BRASIL
               </p>
             </div>
-            <p className="col-md-12 col-lg-5 l-footer__bottom-address">
-              AVENIDA BENTO TRX, 100 - VOLTA PEQUENA - CANOAS, RS, CEP: 95180-052, BRASIL
-            </p>
           </div>
         </div>
       </div>
