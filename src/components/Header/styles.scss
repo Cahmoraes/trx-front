@@ -57,7 +57,7 @@
       border: none;
     }
 
-    button + button {
+    * + button {
       margin-left: 26px;
     }
   }
@@ -105,5 +105,39 @@
 
   &__cartIcon {
     
+  }
+
+  &__userMenu {
+    position: absolute;
+    z-index: 10;
+    width: 201px;
+    top: 45px;
+    right: 75px;
+    background: #FFF;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
+    padding: 16px 18px;
+
+    &-list {
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      
+      &-item {
+        a {
+          color: $gray-500;
+          display: flex;
+          align-items: center;
+        }
+
+        svg {
+          margin-right: 8px;
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      &-item + &-item {
+        margin-top: 21px;
+      }
+    }
   }
 }
