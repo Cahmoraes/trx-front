@@ -10,7 +10,7 @@ export function NewsLetter() {
             <p className="l-newsletter__text-assine">
               Assine nossa <b>Newsletter</b> e receba
             </p>
-            <Button color="tertiary" bold>
+            <Button color="tertiary">
               Novidades Exclusivas.
             </Button>
           </div>

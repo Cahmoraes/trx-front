@@ -12,9 +12,9 @@ import { UserMenu } from './UserMenu'
 
 
 export function Header() {
-  const [userMenuOpen, setUserMenuOpen] = useState(true)
+  const [userMenuOpen, setUserMenuOpen] = useState(false)
 
-  function handleUserMenu() {
+  function handleClickUserMenu() {
     setUserMenuOpen(!userMenuOpen)
   }
 
@@ -25,12 +25,12 @@ export function Header() {
           <div className="row align-items-center justify-content-between">
 
             <div className="col-1 l-header__menu-navigation-mobile">
-              <button>
+              <button onClick={handleClickUserMenu}>
                 <MenuMobileIcon />
               </button>
             </div>
 
-            <div className="col-3 l-header__logo">
+            <div className="col-3 col-lg-2 l-header__logo">
               <Link to="/home">
                 <img src={logoSvg} alt="TRX" />
               </Link>
@@ -45,11 +45,11 @@ export function Header() {
                 <Search />
               </div>
 
-              <button className="l-header__userIcon" onClick={handleUserMenu}>
+              <button className="l-header__userIcon" onClick={handleClickUserMenu}>
                 { userMenuOpen ? <UserMenuUpIcon /> :  <UserMenuDownIcon />}
               </button>
 
-              { userMenuOpen && <UserMenu /> }
+              { userMenuOpen && <UserMenu handleClickUserMenu={handleClickUserMenu} /> }
 
               <button className="l-header__cartIcon">
                 <CartIcon />

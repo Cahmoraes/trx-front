@@ -37,7 +37,7 @@ export function Login() {
         </div>
 
         <div className="l-login__container-button">
-          <Button bold>Entrar</Button>
+          <Button>Entrar</Button>
           <Button
             color="secondary"
           >Não tem cadastro? Cadastre-se</Button>
