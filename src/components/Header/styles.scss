@@ -19,12 +19,38 @@
     min-width: 120px;
     min-height: 37.6px;
 
+    @include device(md) {
+      img {
+        width: 120px;
+        max-width: initial;
+      }
+    }
+
     @include device(sm) {
       order: -1;
+
+      img {
+        width: 120px;
+        max-width: initial;
+      }
+    }
+
+    @media (max-width: 400px) {
+      img {
+        width: 100%;
+        max-width: 100%;
+        margin-left: -16px;
+      }
     }
   }
 
   &__search-desk {
+    margin-left: -130px;
+    
+    @include device(xl) {
+      flex-basis: 719px;
+      max-width: 719px;
+    }    
 
     @include device(sm) {
       display: none;
