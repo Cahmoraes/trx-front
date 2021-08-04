@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 
-export function Breadcrumb({ list }) {
+export function Breadcrumb({ list, className }) {
   return (
-    <div className="c-breadcrumb">
+    <div className={`c-breadcrumb ${className ? className : ''}`}>
       <ul className="c-breadcrumb__list">
         {list.map((item, index) => (
           <Fragment key={item.link}>

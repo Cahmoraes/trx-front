@@ -1,19 +1,19 @@
-import { SectionTitle } from "./components/SectionTitle";
-import { Button } from "../../components/Form/Button";
-import { Loader } from '../../components/Loader';
-import { Badge } from '../../components/Badge';
-import { Hiperlink } from '../../components/Hiperlink';
-import { Input } from '../../components/Form/Input';
-import { Select } from '../../components/Form/Select';
-import { Alert } from '../../components/Alert';
-import { ToggleSwitch } from '../../components/Form/ToggleSwitch';
-import { Breadcrumb } from '../../components/Breadcrumb';
-import { Checkbox } from '../../components/Form/Checkbox';
-import { Radio } from '../../components/Form/Radio';
-import { Tooltip } from '../../components/Tooltip';
-import { AlertContent } from '../../components/AlertContent';
-import { Filter } from '../../components/Filter';
-import { SliderArrow } from '../../components/SliderArrow';
+import { SectionTitle } from "./components/SectionTitle"
+import { Button } from "../../components/Form/Button"
+import { Loader } from '../../components/Loader'
+import { Badge } from '../../components/Badge'
+import { Hiperlink } from '../../components/Hiperlink'
+import { Input } from '../../components/Form/Input'
+import { Select } from '../../components/Form/Select'
+import { Alert } from '../../components/Alert'
+import { ToggleSwitch } from '../../components/Form/ToggleSwitch'
+import { Breadcrumb } from '../../components/Breadcrumb'
+import { Checkbox } from '../../components/Form/Checkbox'
+import { Radio } from '../../components/Form/Radio'
+import { Tooltip } from '../../components/Tooltip'
+import { AlertContent } from '../../components/AlertContent'
+import { Filter } from '../../components/Filter'
+import { SliderArrow } from '../../components/SliderArrow'
 
 export function StyleGuide() {
 
@@ -435,5 +435,5 @@ export function StyleGuide() {
         </div>
       </section>
     </>
-  );
+  )
 }

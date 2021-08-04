@@ -25,9 +25,6 @@ export function SiteMap() {
               <Link to="/login">Login</Link>
             </li>
             <li>
-              <Link to="/register">Registro</Link>
-            </li>
-            <li>
               <Link to="/result-search">Busca não encontrada</Link>
             </li>
             <li>
@@ -35,6 +32,9 @@ export function SiteMap() {
             </li>
             <li>
               <Link to="/new-password">Nova senha</Link>
+            </li>
+            <li>
+              <Link to="/new-account">Nova Conta</Link>
             </li>
             <li>
               <Link to="/Search">Busca</Link>
