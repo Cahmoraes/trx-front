@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Search } from './Search'
 import { MenuNavigation } from './MenuNavigationDesktop'
+import { UserMenu } from './UserMenu'
+import { useOverlay } from '../../hooks/useOverlay'
 
 import logoSvg from '../../assets/images/icons/logo.svg'
 import { ReactComponent as UserMenuDownIcon } from '../../assets/images/icons/user-menu-down.svg'
 import { ReactComponent as UserMenuUpIcon } from '../../assets/images/icons/user-menu-up.svg'
 import { ReactComponent as CartIcon } from '../../assets/images/icons/cart-icon.svg'
 import { ReactComponent as MenuMobileIcon } from '../../assets/images/icons/menu-mobile.svg'
-import { UserMenu } from './UserMenu'
-
 
 export function Header() {
   const [userMenuOpen, setUserMenuOpen] = useState(false)
