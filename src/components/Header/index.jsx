@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { Search } from './Search'
 import { MenuNavigation } from './MenuNavigationDesktop'
 import { UserMenu } from './UserMenu'
-import { useOverlay } from '../../hooks/useOverlay'
 
 import logoSvg from '../../assets/images/icons/logo.svg'
 import { ReactComponent as UserMenuDownIcon } from '../../assets/images/icons/user-menu-down.svg'
