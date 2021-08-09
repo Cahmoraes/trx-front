@@ -1,12 +1,15 @@
+import { useState } from 'react'
+
 import { Breadcrumb } from '../../components/Breadcrumb'
 import { ProductCarousel } from './ProductCarousel'
 import { Button } from '../../components/Form/Button'
 import { Slider } from '../../components/Slider'
 
 import { ReactComponent as SuccessAlertIcon } from '../../assets/images/icons/success.svg'
-import { ReactComponent as ArrowUpIcon } from '../../assets/images/icons/arrow-small-up.svg'
 import { ReactComponent as HeartIcon } from '../../assets/images/icons/heart.svg'
+import { ReactComponent as HeartTapIcon } from '../../assets/images/icons/heart-tap.svg'
 import { ReactComponent as ShareIcon } from '../../assets/images/icons/share.svg'
+import { ReactComponent as ShareTapIcon } from '../../assets/images/icons/share-tap.svg'
 
 import cadeiraFullJPG from '../../assets/images/cadeira-full.jpg'
 import cadeiraMini1JPG from '../../assets/images/cadeira-mini-1.jpg'
@@ -53,6 +56,26 @@ const sliderChairItems = [
 ]
 
 export function ProductDetails() {
+
+  const [favState, setFavState] = useState(false)
+  const [shareState, setShareState] = useState(false)
+
+  function handleFavClick() {
+    setFavState((state) => !state)
+  }
+
+  function handleShareClick() {
+    setShareState((state) => !state)
+  }
+
+  function handleClickToggleBox(event) {
+    const clickedElement = event.currentTarget
+    const content = clickedElement.nextElementSibling
+
+    clickedElement.classList.toggle('l-product-details__information-title--active')
+    content.classList.toggle('l-product-details__information-content--active')
+  }
+
   return (
     <>
       <div className="l-product-details container">
@@ -74,21 +97,39 @@ export function ProductDetails() {
             <span className="l-product-details__line"></span>
 
             <div className="l-product-details__share-container">
-              <span><HeartIcon /> Adicionar à Lista de Desejos</span>
-              <span><ShareIcon /> Compartilhar</span>
+              <span>
+                {
+                  favState ?
+                    <button onClick={handleFavClick}><HeartTapIcon /></button> :
+                    <button onClick={handleFavClick}><HeartIcon /></button>
+                }
+                Adicionar à Lista de Desejos
+              </span>
+              <span>
+                {
+                  shareState ?
+                    <button onClick={handleShareClick}><ShareTapIcon /></button> :
+                    <button onClick={handleShareClick}><ShareIcon /></button>
+                }
+                Compartilhar
+              </span>
             </div>
 
             <span className="l-product-details__line"></span>
 
             <div className="l-product-details__information">
-              <span className="l-product-details__information-title">Detalhes do Produto <ArrowUpIcon /></span>
+              <span className="l-product-details__information-title" onClick={handleClickToggleBox}>
+                Detalhes do Produto 
+              </span>
               <p className="l-product-details__information-content">
                 Precisando de uma cadeira confortável para o seu ambiente de trabalho? Conte com a Cadeira de Escritório Oslo. Ela é ideal para proporcionar bom gosto para a decoração, deixando você muito mais à vontade para realizar as tarefas do dia. Com rodízios e regulagem de altura, ela facilita a sua movimentação e se adapta à sua necessidade.
               </p>
             </div>
 
             <div className="l-product-details__information">
-              <span className="l-product-details__information-title">Especificações <ArrowUpIcon /></span>
+              <span className="l-product-details__information-title" onClick={handleClickToggleBox}>
+                Especificações 
+              </span>
               <p className="l-product-details__information-content">
                 Cor: Preto <br />
                 Instruções/Cuidados: Produto recomendado para uso doméstico. Limpar com pano macio seco ou levemente umedecido com água.  <br />

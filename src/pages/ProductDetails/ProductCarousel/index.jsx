@@ -12,14 +12,14 @@ export function ProductCarousel({ productImages = [] }) {
         {
           productImages.slice(1).map((image, index) => (
             index === 0 ? (
-              <button key={image.src} className="c-product-carousel__item c-product-carousel__item--active">
+              <button key={image.id} className="c-product-carousel__item c-product-carousel__item--active">
                 <img
                   src={image.src}
                   alt={image.description}
                 />
               </button>
             ) : (
-              <button key={image.src} className="c-product-carousel__item">
+              <button key={image.id} className="c-product-carousel__item">
                 <img
                   key={image.src}
                   src={image.src}

@@ -5,9 +5,15 @@
   }
 
   &__description-container {
-    max-width: 460px;
-    margin-left: 90px;
+    
+    @include device(xl) {
+      margin-left: 90px;
+      max-width: 460px;
+    }
 
+    @include device(lg) {
+      margin-top: 20px;
+    }
 
     @include device(md) {
       margin-left: 0px;
@@ -73,6 +79,11 @@
     color: $gray-500;
     line-height: 2.4rem;
 
+    button {
+      background: transparent;
+      border: none;
+    }
+
     @include device(sm) {
       flex-direction: column;
 
@@ -100,14 +111,33 @@
       align-items: center;
       justify-content: space-between;
       color: $gray-500;
+      cursor: pointer;
+
+      &::after {
+        content: '';
+        width: 15px;
+        height: 8px;
+        background: url("../../assets/images/icons/arrow-small-up.svg") no-repeat center;
+      }
+  
+      &--active {
+        &::after {
+          background: url("../../assets/images/icons/arrow-small-down.svg") no-repeat center;
+        }      
+      }
     }
 
     &-content {
+      display: none;
       padding: 16px 8px;
       color: $gray-400;
       font-size: 1.4rem;
       line-height: 2.1rem;
       font-weight: 400;
+
+      &--active {
+        display: block;
+      }
 
       @include device(sm) {
         padding: 16px 0;
