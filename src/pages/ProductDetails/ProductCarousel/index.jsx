@@ -10,7 +10,7 @@ export function ProductCarousel({ productImages = [] }) {
       <div className="c-product-carousel__items">
         <button className="c-product-carousel__arrow"><ArrowLeftIcon /></button>
         {
-          productImages.map((image, index) => (
+          productImages.slice(1).map((image, index) => (
             index === 0 ? (
               <button key={image.src} className="c-product-carousel__item c-product-carousel__item--active">
                 <img

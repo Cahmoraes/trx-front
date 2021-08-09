@@ -24,7 +24,8 @@ const productImages = [
   { id: 2, src: cadeiraMini1JPG, description: 'cadeira 2' },
   { id: 3, src: cadeiraMini2JPG, description: 'cadeira 3' },
   { id: 4, src: cadeiraMini3JPG, description: 'cadeira 4' },
-  { id: 5, src: cadeiraMini4JPG, description: 'cadeira 5' }
+  { id: 5, src: cadeiraMini4JPG, description: 'cadeira 5' },
+  { id: 6, src: cadeiraMini2JPG, description: 'cadeira 6' }
 ]
 
 const sliderChairItems = [
