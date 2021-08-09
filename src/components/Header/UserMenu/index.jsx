@@ -1,5 +1,5 @@
 import { ReactComponent as UserIcon } from '../../../assets/images/icons/user.svg'
-import { ReactComponent as NewUserIcon } from '../../../assets/images/icons/newUser.svg'
+import { ReactComponent as NewUserIcon } from '../../../assets/images/icons/new-user.svg'
 import { ReactComponent as EditIcon } from '../../../assets/images/icons/edit.svg'
 import { ReactComponent as BoxIcon } from '../../../assets/images/icons/box.svg'
 import { ReactComponent as CardIcon } from '../../../assets/images/icons/card1.svg'

@@ -8,6 +8,7 @@ import { StyleGuide } from '../pages/StyleGuide'
 import { RecoveryPassword } from '../pages/RecoveryPassword'
 import { NewAccount } from '../pages/NewAccount'
 import { NewPassword } from '../pages/NewPassword'
+import { ProductDetails } from '../pages/ProductDetails'
 
 export function Routes() {
   return (
@@ -19,6 +20,7 @@ export function Routes() {
       <Route path="/recovery-password" component={RecoveryPassword} />
       <Route path="/new-account" component={NewAccount} />
       <Route path="/new-password" component={NewPassword} />
+      <Route path="/product-details" component={ProductDetails} />
     </Switch>
   )
 }
