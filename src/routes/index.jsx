@@ -9,6 +9,7 @@ import { RecoveryPassword } from '../pages/RecoveryPassword'
 import { NewAccount } from '../pages/NewAccount'
 import { NewPassword } from '../pages/NewPassword'
 import { ProductDetails } from '../pages/ProductDetails'
+import { ProductDetailsMultiSku } from '../pages/ProductDetails/MultiSku'
 
 export function Routes() {
   return (
@@ -21,6 +22,7 @@ export function Routes() {
       <Route path="/new-account" component={NewAccount} />
       <Route path="/new-password" component={NewPassword} />
       <Route path="/product-details" component={ProductDetails} />
+      <Route path="/product-details-multi-sku" component={ProductDetailsMultiSku} />
     </Switch>
   )
 }

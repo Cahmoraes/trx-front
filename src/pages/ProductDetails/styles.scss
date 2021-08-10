@@ -38,6 +38,30 @@
     }
   }
 
+  &__price-container {
+    display: flex;
+    align-items: center;
+
+    &-for {
+      position: relative;
+      bottom: 3px;
+    }
+  }
+  
+  &__old-price {
+    font-size: 1.6rem;
+    text-decoration: line-through;
+    color: $gray-500;
+    font-weight: 400;
+  }
+
+  &__for-price {
+    color: $secondary-100;
+    margin: 0 3px;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
   &__price {
     color: $secondary-100;
     font-size: 3rem;
@@ -48,6 +72,14 @@
 
     @include device(sm) {
       text-align: center;
+    }
+  }
+
+  &__select {
+
+    @include device(lg) {
+      max-width: 186px;
+      width: 100%;
     }
   }
 
@@ -71,6 +103,7 @@
   }
 
   &__share-container {
+    position: relative;
     margin-top: 16px;
     margin-bottom: 48px;
     display: flex;
@@ -82,6 +115,8 @@
     button {
       background: transparent;
       border: none;
+      display: flex;
+      align-items: center;
     }
 
     @include device(sm) {
@@ -92,12 +127,66 @@
       }
     }
 
-    span {
+    svg {
+      margin-right: 8px;
+    }
+    
+    &-options {
+      position: absolute;
+      z-index: 1;
+      background: $white;
+      right: 0;
+      top: 30px;
+      width: 100%;
+      max-width: 200px;
+      padding: 16px 16px 30px;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
+      display: flex;
+      flex-direction: column;
+
+      @include device(sm) {
+        right: 124px;
+        top: 68px;
+      }
+    }
+
+    &-close {
+      align-self: flex-end;
+    }
+
+    &-list {
+
+      & li:not(li:last-of-type) {
+        margin-bottom: 8px;
+      }
+    }
+
+    &-item {
       display: flex;
       align-items: center;
+      font-size: 1.4rem;
 
       svg {
-        margin-right: 8px;
+        margin-right: 20px;
+        width: 24px;
+      }
+
+      .svg-facebook {
+        path {
+          fill: #3B5998;
+        }
+      }
+
+      .svg-pinterest {
+        path {
+          fill: #E60023;
+        }
+      }
+      
+      .svg-twitter {
+        path {
+          fill: #00ACED;
+        }
       }
     }
 

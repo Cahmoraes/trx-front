@@ -1,40 +1,40 @@
 import { useState } from 'react'
 
-import { Breadcrumb } from '../../components/Breadcrumb'
-import { ProductCarousel } from './ProductCarousel'
-import { Button } from '../../components/Form/Button'
-import { Slider } from '../../components/Slider'
+import { Breadcrumb } from '../../../components/Breadcrumb'
+import { Select } from '../../../components/Form/Select'
+import { ProductCarousel } from '../ProductCarousel'
+import { Button } from '../../../components/Form/Button'
+import { Slider } from '../../../components/Slider'
 
-import { ReactComponent as SuccessAlertIcon } from '../../assets/images/icons/success.svg'
-import { ReactComponent as HeartIcon } from '../../assets/images/icons/heart.svg'
-import { ReactComponent as HeartTapIcon } from '../../assets/images/icons/heart-tap.svg'
-import { ReactComponent as ShareIcon } from '../../assets/images/icons/share.svg'
-import { ReactComponent as ShareTapIcon } from '../../assets/images/icons/share-tap.svg'
-import { ReactComponent as FacebookIcon } from '../../assets/images/icons/facebook.svg'
-import { ReactComponent as TwitterIcon } from '../../assets/images/icons/twitter.svg'
-import { ReactComponent as PinterestIcon } from '../../assets/images/icons/pinterest.svg'
-import { ReactComponent as EmailIcon } from '../../assets/images/icons/email.svg'
-import { ReactComponent as CloseIcon } from '../../assets/images/icons/close.svg'
+import { ReactComponent as SuccessAlertIcon } from '../../../assets/images/icons/success.svg'
+import { ReactComponent as CloseIcon } from '../../../assets/images/icons/close.svg'
+import { ReactComponent as HeartIcon } from '../../../assets/images/icons/heart.svg'
+import { ReactComponent as HeartTapIcon } from '../../../assets/images/icons/heart-tap.svg'
+import { ReactComponent as ShareIcon } from '../../../assets/images/icons/share.svg'
+import { ReactComponent as ShareTapIcon } from '../../../assets/images/icons/share-tap.svg'
+import { ReactComponent as FacebookIcon } from '../../../assets/images/icons/facebook.svg'
+import { ReactComponent as TwitterIcon } from '../../../assets/images/icons/twitter.svg'
+import { ReactComponent as PinterestIcon } from '../../../assets/images/icons/pinterest.svg'
+import { ReactComponent as EmailIcon } from '../../../assets/images/icons/email.svg'
 
+import cafeteiraFullJPG from '../../../assets/images/cafeteira-full.jpg'
+import cafeteiraMini1JPG from '../../../assets/images/cafeteira-mini-1.jpg'
+import cafeteiraMini2JPG from '../../../assets/images/cafeteira-mini-2.jpg'
+import cafeteiraMini3JPG from '../../../assets/images/cafeteira-mini-3.jpg'
+import cafeteiraMini4JPG from '../../../assets/images/cafeteira-mini-4.jpg'
 
-import cadeiraFullJPG from '../../assets/images/cadeira-full.jpg'
-import cadeiraMini1JPG from '../../assets/images/cadeira-mini-1.jpg'
-import cadeiraMini2JPG from '../../assets/images/cadeira-mini-2.jpg'
-import cadeiraMini3JPG from '../../assets/images/cadeira-mini-3.jpg'
-import cadeiraMini4JPG from '../../assets/images/cadeira-mini-4.jpg'
-
-import cadeira1 from '../../assets/images/cadeira-1.jpg'
-import cadeira2 from '../../assets/images/cadeira-2.jpg'
-import cadeira3 from '../../assets/images/cadeira-3.jpg'
-import cadeira4 from '../../assets/images/cadeira-4.jpg'
+import cadeira1 from '../../../assets/images/cadeira-1.jpg'
+import cadeira2 from '../../../assets/images/cadeira-2.jpg'
+import cadeira3 from '../../../assets/images/cadeira-3.jpg'
+import cadeira4 from '../../../assets/images/cadeira-4.jpg'
 
 const productImages = [
-  { id: 1, src: cadeiraFullJPG, description: 'cadeira 1' },
-  { id: 2, src: cadeiraMini1JPG, description: 'cadeira 2' },
-  { id: 3, src: cadeiraMini2JPG, description: 'cadeira 3' },
-  { id: 4, src: cadeiraMini3JPG, description: 'cadeira 4' },
-  { id: 5, src: cadeiraMini4JPG, description: 'cadeira 5' },
-  { id: 6, src: cadeiraMini2JPG, description: 'cadeira 6' }
+  { id: 1, src: cafeteiraFullJPG, description: 'cadeira 1' },
+  { id: 2, src: cafeteiraMini1JPG, description: 'cadeira 2' },
+  { id: 3, src: cafeteiraMini2JPG, description: 'cadeira 3' },
+  { id: 4, src: cafeteiraMini3JPG, description: 'cadeira 4' },
+  { id: 5, src: cafeteiraMini4JPG, description: 'cadeira 5' },
+  { id: 6, src: cafeteiraMini2JPG, description: 'cadeira 6' }
 ]
 
 const sliderChairItems = [
@@ -61,7 +61,7 @@ const sliderChairItems = [
   }
 ]
 
-export function ProductDetails() {
+export function ProductDetailsMultiSku() {
 
   const [favState, setFavState] = useState(false)
   const [shareState, setShareState] = useState(false)
@@ -95,10 +95,24 @@ export function ProductDetails() {
             <ProductCarousel productImages={productImages} />
           </div>
           <div className="col-lg-6 l-product-details__description-container">
-            <h3 className="l-product-details__title">Cadeira de Escritório Diretor Giratória Preta</h3>
-            <span className="l-product-details__price">R$ 433,79</span>
-            <span className="l-product-details__line"></span>
-            <Button className="u-mt-32" color="tertiary">Adicionar ao carrinho</Button>
+            <h3 className="l-product-details__title">Cafeteira Elétrica Philco PH14 Inox - Preto Fosco e Prata</h3>
+            <div className="l-product-details__price-container">
+              <div className="l-product-details__price-container-for">
+                <span className="l-product-details__old-price">de R$ 198,90 </span>
+                <span className="l-product-details__for-price">por</span>
+              </div>
+              <span className="l-product-details__price">R$ 139,90</span>
+            </div>
+
+            <span className="l-product-details__line mb-4"></span>
+
+            <Select className="l-product-details__select" name="voltagem" message="Voltagem">
+              <option value="">Selecione</option>
+              <option value="">127 V</option>
+              <option value="">220 V</option>
+            </Select>
+
+            <Button className="u-mt-32" color="tertiary" disabled>Adicionar ao carrinho</Button>
             <span className="l-product-details__stock"><SuccessAlertIcon /> Item em estoque</span>
             <span className="l-product-details__line"></span>
 

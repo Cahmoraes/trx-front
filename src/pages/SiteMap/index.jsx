@@ -28,6 +28,9 @@ export function SiteMap() {
               <Link to="/product-details">Detalhes do pedido</Link>
             </li>
             <li>
+              <Link to="/product-details-multi-sku">Detalhes do pedido Multi SKU</Link>
+            </li>
+            <li>
               <Link to="/result-search">Busca não encontrada</Link>
             </li>
             <li>

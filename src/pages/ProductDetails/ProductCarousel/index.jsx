@@ -1,12 +1,19 @@
+import { useState } from 'react'
+import { ProductGallery } from '../ProductGallery'
+
 import { ReactComponent as ArrowLeftIcon } from '../../../assets/images/icons/arrow-large-left.svg'
 import { ReactComponent as ArrowRightIcon } from '../../../assets/images/icons/arrow-large-right.svg'
 import { ReactComponent as ExpandIcon } from '../../../assets/images/icons/expand.svg'
 
 export function ProductCarousel({ productImages = [] }) {
+  const [galleryState, setGalleryState] = useState(false)
+
   if (productImages.length === 0) return null
+
   return (
     <div className="c-product-carousel">
-      <img className="c-product-carousel__destaque" src={productImages[0].src} alt={productImages[0].description} />
+      <img onClick={() => setGalleryState(true)} className="c-product-carousel__destaque" src={productImages[0].src} alt={productImages[0].description} />
+      { galleryState && <ProductGallery setGalleryState={setGalleryState} productImages={productImages} /> }
       <div className="c-product-carousel__items">
         <button className="c-product-carousel__arrow"><ArrowLeftIcon /></button>
         {
