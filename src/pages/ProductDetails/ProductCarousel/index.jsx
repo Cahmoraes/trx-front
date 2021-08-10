@@ -47,7 +47,7 @@ export function ProductCarousel({ productImages = [] }) {
           <li><a className="c-product-carousel__control-item" href="/">&nbsp;</a></li>
           <li><a className="c-product-carousel__control-item" href="/">&nbsp;</a></li>
         </ul>
-        <button className="c-product-carousel__control-expand">
+        <button className="c-product-carousel__control-expand" onClick={() => setGalleryState(true)}>
           <ExpandIcon />
         </button>
       </div>
