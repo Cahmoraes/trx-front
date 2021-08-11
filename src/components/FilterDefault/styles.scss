@@ -1,0 +1,49 @@
+.c-filter-default {
+  color: $gray-500;
+
+  &__title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    font-weight: 500;
+  }
+
+  &__button-close {
+    background: transparent;
+    border: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 14px;
+  }
+
+  &__item {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 400;
+    flex: 0 0 auto;
+    margin-right: 8px;
+    margin-bottom: 12px;
+  }
+
+  &__line {
+    height: 1px;
+    width: 100%;
+    background: $gray-200;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}

@@ -25,6 +25,9 @@
 @import "../components/Newsletter/styles";
 @import "../components/Footer/styles";
 @import "../components/Overlay/styles";
+@import "../components/FilterCategory/styles";
+@import "../components/FilterDefault/styles";
+@import "../components/ProductBox/styles";
 
 // Header
 @import "../components/Header/Search/styles";
@@ -50,3 +53,6 @@
 @import "../pages/ProductDetails/styles";
 @import "../pages/ProductDetails/ProductCarousel/styles";
 @import "../pages/ProductDetails/ProductGallery/styles";
+
+// Department
+@import "../pages/Category/styles.scss";

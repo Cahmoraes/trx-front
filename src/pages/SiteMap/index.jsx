@@ -43,7 +43,10 @@ export function SiteMap() {
               <Link to="/new-account">Nova Conta</Link>
             </li>
             <li>
-              <Link to="/Search">Busca</Link>
+              <Link to="/search">Busca</Link>
+            </li>
+            <li>
+              <Link to="/department">Departamento</Link>
             </li>
           </ul>
         </div>

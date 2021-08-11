@@ -85,10 +85,12 @@ export function ProductDetails() {
   return (
     <>
       <div className="l-product-details container">
-        <Breadcrumb className="my-5" list={[
-          { href: "#", link: "Home" },
-          { href: "#", link: "Produto" }
-        ]} />
+        <div className="row">
+          <Breadcrumb className="my-5" list={[
+            { href: "#", link: "Home" },
+            { href: "#", link: "Produto" }
+          ]} />
+        </div>
 
         <div className="row">
           <div className="col-lg-6">

@@ -1,0 +1,69 @@
+.c-product-box {
+  padding: 8px 16px 16px;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: $gray-500;
+    line-height: 2.4rem;
+  }
+
+  &__price-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+  }
+
+  &__price {
+    font-weight: 600;
+    color: $secondary-100;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+
+  &__old-price {
+    color: $gray-400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-decoration: line-through;
+  }
+
+  &__button {
+    border: 1px solid $primary-300;
+    color: $primary-300;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 600;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 16px;
+
+    @include device(sm) {
+      display: none;
+    }
+
+    svg {
+      width: 18px;
+      margin-right: 8px;
+    }
+
+    path {
+      fill: $primary-300;
+    }
+  }
+}
