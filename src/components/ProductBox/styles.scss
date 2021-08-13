@@ -18,6 +18,10 @@
     font-size: 1.6rem;
     color: $gray-500;
     line-height: 2.4rem;
+
+    @include device(sm) {
+      font-size: 1.4rem;
+    }
   }
 
   &__price-container {
@@ -31,6 +35,10 @@
     color: $secondary-100;
     font-size: 2.4rem;
     line-height: 3.6rem;
+
+    @include device(sm) {
+      font-size: 1.8rem;
+    }
   }
 
   &__old-price {
@@ -38,6 +46,10 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
     text-decoration: line-through;
+
+    @include device(sm) {
+      font-size: 1.4rem;
+    }
   }
 
   &__button {

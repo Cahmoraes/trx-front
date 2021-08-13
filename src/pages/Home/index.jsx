@@ -1,3 +1,4 @@
+import { NewsLetter } from '../../components/Newsletter'
 import { Hero } from '../../components/Hero'
 import { Slider } from '../../components/Slider'
 import { Banner } from '../../components/Banner'
@@ -38,7 +39,6 @@ import banner3JPG from '../../assets/images/banner-3.jpg'
 import banner3MobileJPG from '../../assets/images/banner-3-mobile.jpg'
 import banner4JPG from '../../assets/images/banner-4.jpg'
 import banner4MobileJPG from '../../assets/images/banner-4-mobile.jpg'
-import { NewsLetter } from '../../components/Newsletter'
 
 const bannersConfig = [
   {
@@ -212,7 +212,7 @@ export function Home() {
         </div>
       </div>
 
-      <div className="container my-5">
+      <div className="container u-mt-80">
         <div className="row">
           <div className="col-12">
             <Slider category title="Navegue por Categoria" items={sliderCategories} />
@@ -220,7 +220,7 @@ export function Home() {
         </div>
       </div>
 
-      <div className="container my-6">
+      <div className="container u-mt-80">
         <div className="row">
           <div className="col-12">
             <Slider title="Destaques no TRX" items={sliderProductItems} />
@@ -228,7 +228,7 @@ export function Home() {
         </div>
       </div>
 
-      <div className="container my-5">
+      <div className="container u-mt-80">
         <div className="row">
           <div className="col-md-4 my-1">
             <a href="/">
@@ -248,7 +248,7 @@ export function Home() {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container u-mt-80">
         <div className="row">
           <div className="col-12">
             <Banner config={imageBanner_1} />
@@ -256,7 +256,7 @@ export function Home() {
         </div>
       </div>
 
-      <div className="container my-5">
+      <div className="container u-mt-80">
         <div className="row">
           <div className="col-12">
             <Slider title="Mais Vendidos no TRX" items={sliderChairItems} />
@@ -264,7 +264,7 @@ export function Home() {
         </div>
       </div>
 
-      <div className="container my-5">
+      <div className="container u-mt-80">
         <div className="row">
           <div className="col-12">
             <Banner config={imageBanner_2} />
@@ -272,7 +272,7 @@ export function Home() {
         </div>
       </div>
 
-      <div className="container my-5">
+      <div className="container u-mt-80">
         <div className="row">
           <div className="col-12">
             <Slider title="Novidades pra você" items={sliderNewsItems} />
@@ -280,7 +280,7 @@ export function Home() {
         </div>
       </div>
 
-      <div className="container my-5">
+      <div className="container u-mt-80">
         <div className="row">
           <div className="col-12">
             <DoubleBanner config={bannersConfig} />

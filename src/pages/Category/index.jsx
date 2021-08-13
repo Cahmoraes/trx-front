@@ -70,7 +70,7 @@ const products = [
 
 export function Category() {
   return (
-    <div className="l-department container">
+    <div className="l-category container">
       <div className="row">
         <Breadcrumb className="my-5" list={[
           { href: "#", link: "Home" },
@@ -81,14 +81,14 @@ export function Category() {
 
       <div className="row">
         <div className="col-12">
-          <h1 className="l-department__title">Informática</h1>
-          <p className="l-department__visualization">Visualizando 1 - 15 de 24.660</p>
-          <div className="l-department__line"></div>
+          <h1 className="l-category__title">Informática</h1>
+          <p className="l-category__visualization">Visualizando 1 - 15 de 24.660</p>
+          <div className="l-category__line"></div>
         </div>
       </div>
 
       <div className="row justify-content-between mb-4">
-        <div className="col-5 l-department__filter-button">
+        <div className="col-5 l-category__filter-button">
           <Button color="secondary">
             <FilterIcon className="mr-2" /> Filtrar
           </Button>
@@ -101,13 +101,13 @@ export function Category() {
       </div>
 
       <div className="row">
-        <div className="col-lg-3 l-department__filter-container">
-          <span className="l-department__filter-title">Filtrar por</span>
+        <div className="col-lg-3 l-category__filter-container">
+          <span className="l-category__filter-title">Filtrar por</span>
           <FilterCategory />
           <FilterDefault />
           <FilterDefault />
         </div>
-        <div className="col-lg-9 l-department__product-results">
+        <div className="col-lg-9 l-category__product-results">
           {
             products.map(product => (
               <ProductBox product={product} key={product.name} />
@@ -115,8 +115,8 @@ export function Category() {
           }
         </div>
         <div className="col-lg-9 offset-lg-3">
-          <div className="l-department__show-more u-centralize">
-            <p className="l-department__show-more-text">
+          <div className="l-category__show-more u-centralize">
+            <p className="l-category__show-more-text">
               Visualizando 1 - 15 de 24.660
             </p>
             <Button>Ver mais produtos</Button>

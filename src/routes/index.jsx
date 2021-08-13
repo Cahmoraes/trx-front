@@ -11,6 +11,7 @@ import { NewPassword } from '../pages/NewPassword'
 import { ProductDetails } from '../pages/ProductDetails'
 import { ProductDetailsMultiSku } from '../pages/ProductDetails/MultiSku'
 import { Category } from '../pages/Category'
+import { Department } from '../pages/Department'
 
 export function Routes() {
   return (
@@ -24,7 +25,8 @@ export function Routes() {
       <Route path="/new-password" component={NewPassword} />
       <Route path="/product-details" component={ProductDetails} />
       <Route path="/product-details-multi-sku" component={ProductDetailsMultiSku} />
-      <Route path="/department" component={Category} />
+      <Route path="/category" component={Category} />
+      <Route path="/department" component={Department} />
     </Switch>
   )
 }

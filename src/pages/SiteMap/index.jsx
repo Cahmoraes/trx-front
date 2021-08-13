@@ -46,6 +46,9 @@ export function SiteMap() {
               <Link to="/search">Busca</Link>
             </li>
             <li>
+              <Link to="/category">Categoria</Link>
+            </li>
+            <li>
               <Link to="/department">Departamento</Link>
             </li>
           </ul>
