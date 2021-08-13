@@ -1,5 +1,8 @@
+import { useState } from 'react'
 import { Filter } from '../Filter'
+
 import { ReactComponent as TraceIcon } from '../../assets/images/icons/less.svg'
+import { ReactComponent as PlusIcon } from '../../assets/images/icons/plus.svg'
 
 const configItems = {
   title: 'Preço',
@@ -14,6 +17,13 @@ const configItems = {
 }
 
 export function FilterDefault({ config = configItems }) {
+
+  const [buttonFilterState, setButtonFilterState] = useState(true)
+
+  function handleClickButtonFilter() {
+    setButtonFilterState((state) => !state)
+  }
+
   return (
     <div className="c-filter-default">
 
@@ -21,15 +31,16 @@ export function FilterDefault({ config = configItems }) {
         <h3 className="c-filter-default__title">
           {config.title}
         </h3>
-        <button className="c-filter-default__button">
-          <TraceIcon />
+        <button className="c-filter-default__button" onClick={handleClickButtonFilter}>
+          {buttonFilterState ? <PlusIcon /> : <TraceIcon />}
         </button>
       </div>
 
       <div className="c-filter-default__list">
         {
-          config.items.map(item => (
-            <Filter className="c-filter-default__item" tag={item} key={item} />
+          buttonFilterState && config.items.map((item, index) => (
+            index % 2 === 0 ? <Filter showIcon className="c-filter-default__item" tag={item} key={item} /> :
+              <Filter className="c-filter-default__item" tag={item} key={item} />
           ))
         }
       </div>
