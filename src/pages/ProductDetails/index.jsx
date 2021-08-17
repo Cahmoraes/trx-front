@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useSideCart } from '../../hooks/useSideCart'
 
 import { Breadcrumb } from '../../components/Breadcrumb'
 import { ProductCarousel } from './ProductCarousel'
@@ -27,6 +28,7 @@ import cadeira1 from '../../assets/images/cadeira-1.jpg'
 import cadeira2 from '../../assets/images/cadeira-2.jpg'
 import cadeira3 from '../../assets/images/cadeira-3.jpg'
 import cadeira4 from '../../assets/images/cadeira-4.jpg'
+
 
 const productImages = [
   { id: 1, src: cadeiraFullJPG, description: 'cadeira 1' },
@@ -66,6 +68,8 @@ export function ProductDetails() {
   const [favState, setFavState] = useState(false)
   const [shareState, setShareState] = useState(false)
 
+  const {handleClickToggleSideCart} = useSideCart()
+
   function handleFavClick() {
     setFavState((state) => !state)
   }
@@ -100,7 +104,7 @@ export function ProductDetails() {
             <h3 className="l-product-details__title">Cadeira de Escritório Diretor Giratória Preta</h3>
             <span className="l-product-details__price">R$ 433,79</span>
             <span className="l-product-details__line"></span>
-            <Button className="u-mt-32" color="tertiary">Adicionar ao carrinho</Button>
+            <Button className="u-mt-32" color="tertiary" onClick={handleClickToggleSideCart} >Adicionar ao carrinho</Button>
             <span className="l-product-details__stock"><SuccessAlertIcon /> Item em estoque</span>
             <span className="l-product-details__line"></span>
 

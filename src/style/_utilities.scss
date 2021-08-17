@@ -1,5 +1,5 @@
 .u-bold {
-  font-weight: 700!important;
+  font-weight: 700 !important;
 }
 
 .u-centralize {
@@ -25,4 +25,8 @@
   @include device(sm) {
     margin-bottom: 56px;
   }
+}
+
+.u-position-relative {
+  position: relative;
 }

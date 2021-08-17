@@ -1,13 +1,13 @@
 import { BrowserRouter as Router } from 'react-router-dom'
-import { OverlayProvider } from './hooks/useOverlay'
+import { AppProvider } from './hooks/AppProvider'
 import { Routes } from './routes'
 
 export function App() {
   return (
     <Router>
-      <OverlayProvider>
+      <AppProvider>
         <Routes />
-      </OverlayProvider>
+      </AppProvider>
     </Router>
   )
 }
