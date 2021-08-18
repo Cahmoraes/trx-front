@@ -4,65 +4,60 @@ import { ReactComponent as NotVisibleIcon } from '../../../assets/images/icons/n
 import { ReactComponent as EmailIcon } from '../../../assets/images/icons/email.svg'
 import { ReactComponent as LockIcon } from '../../../assets/images/icons/lock.svg'
 
-const iconTypes = (typeIcon) => ({
-  'visible': <VisibleIcon />,
-  'notVisible': <NotVisibleIcon />,
-  'email': <EmailIcon />,
-  'lock': <LockIcon />
-})[typeIcon] || <VisibleIcon />
-
+const iconTypes = (typeIcon) =>
+	({
+		visible: <VisibleIcon />,
+		notVisible: <NotVisibleIcon />,
+		email: <EmailIcon />,
+		lock: <LockIcon />,
+	}[typeIcon] || <VisibleIcon />)
 
 export function Input({
-  label,
-  color,
-  message,
-  showIcon = false,
-  iconType,
-  link,
-  href,
-  children,
-  className,
-  ...rest
+	label,
+	color,
+	message,
+	showIcon = false,
+	iconType,
+	link,
+	href,
+	children,
+	className,
+	...rest
 }) {
+	const [isFilled, setIsFilled] = useState(false)
 
-  const [isFilled, setIsFilled] = useState(false)
+	function handleFilled({ target }) {
+		if (target.value.trim()) {
+			setIsFilled(true)
+		} else {
+			setIsFilled(false)
+		}
+	}
 
-  function handleFilled({ target }) {
-    if (target.value.trim()) {
-      setIsFilled(true)
-    } else {
-      setIsFilled(false)
-    }
-  }
-
-  return (
-    <div className={`c-input ${className ? className : ''}`}>
-      <label className="c-input__label">
-        {label}
-        <input
-          type="text"
-          onChange={handleFilled}
-          onBlur={handleFilled}
-          className={`
+	return (
+		<div className={`c-input ${className ? className : ''}`}>
+			<label className="c-input__label">
+				{label}
+				<input
+					type="text"
+					onChange={handleFilled}
+					onBlur={handleFilled}
+					className={`
             c-input__input ${color ? color : ''} ${isFilled ? 'is-filled' : ''}
           `}
-          {...rest}
-        />
+					{...rest}
+				/>
 
-        {showIcon && (
-          <button className="has-icon">
-            {iconTypes(iconType)}
-          </button>
-        )}
+				{showIcon && <button className="has-icon">{iconTypes(iconType)}</button>}
 
-        {message && (
-          <div className="c-input__message">
-            {color === 'error' && (
-              <span className={`c-input__text-${color}`}>{message}</span>
-            )}
-          </div>
-        )}
-      </label>
-    </div>
-  );
+				{message && (
+					<div className="c-input__message">
+						{color === 'error' && (
+							<span className={`c-input__text-${color}`}>{message}</span>
+						)}
+					</div>
+				)}
+			</label>
+		</div>
+	)
 }
