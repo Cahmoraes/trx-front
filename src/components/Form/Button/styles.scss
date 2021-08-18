@@ -1,97 +1,97 @@
 .c-button {
-  width: 100%;
-  height: 44px;
-  font-weight: 600;
-  border: none;
-  font-size: 1.6rem;
-  justify-content: center;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  transition: all 300ms ease;
+	width: 100%;
+	height: 44px;
+	font-weight: 600;
+	border: none;
+	font-size: 1.6rem;
+	justify-content: center;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	transition: all 300ms ease;
 
-  svg {
-    transition: inherit;
-  }
+	svg {
+		transition: inherit;
+	}
 
-  path {
-    fill: $primary-300;
-    transition: inherit;
-  }
+	path {
+		fill: $primary-300;
+		transition: inherit;
+	}
 
-  &--primary {
-    color: $white;
-    background: $primary-300;
-    
-    path {
-      fill: $white;
-    }
+	&--primary {
+		color: $white;
+		background: $primary-300;
 
-    &:hover {
-      background-color: $primary-400;
-    }
+		path {
+			fill: $white;
+		}
 
-    &:disabled {
-      color: $gray-400;
-      background: $gray-200;
+		&:hover {
+			background-color: $primary-400;
+		}
 
-      path {
-        fill: $gray-300;
-      }
-    }
-  }
+		&:disabled {
+			color: $gray-400;
+			background: $gray-200;
 
-  &--secondary {
-    background: $white;
-    color: $primary-300;
-    border: 1px solid $primary-300;
+			path {
+				fill: $gray-300;
+			}
+		}
+	}
 
-    &:hover {
-      background: $primary-300;
-      color: $white;
+	&--secondary {
+		background: $white;
+		color: $primary-300;
+		border: 1px solid $primary-300;
 
-      path {
-        fill: $white;
-      }
-    }
+		&:hover {
+			background: $primary-300;
+			color: $white;
 
-    &:disabled {
-      background: $white;
-      border: 1px solid $gray-300;
-      color: $gray-300;
+			path {
+				fill: $white;
+			}
+		}
 
-      path {
-        fill: $gray-300;
-      }
-    }
-  }
+		&:disabled {
+			background: $white;
+			border: 1px solid $gray-300;
+			color: $gray-300;
 
-  &--tertiary {
-    color: $white;
-    background: $secondary-100;
+			path {
+				fill: $gray-300;
+			}
+		}
+	}
 
-    &:hover {
-      background: $secondary-200;
-    }
+	&--tertiary {
+		color: $white;
+		background: $secondary-100;
 
-    &:disabled {
-      background: $gray-200;
-      color: $gray-400;
+		&:hover {
+			background: $secondary-200;
+		}
 
-      path {
-        fill: $gray-300;
-      }
-    }
-  }
+		&:disabled {
+			background: $gray-200;
+			color: $gray-400;
 
-  &__icon {
-    width: 2rem;
-    height: 2rem;
-    margin-right: 1rem;
+			path {
+				fill: $gray-300;
+			}
+		}
+	}
 
-    &--small {
-      width: 14px;
-      height: 14px;
-    }
-  }
+	&__icon {
+		width: 2rem;
+		height: 2rem;
+		margin-right: 1rem;
+
+		&--small {
+			width: 14px;
+			height: 14px;
+		}
+	}
 }
