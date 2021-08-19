@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Search } from './Search'
 import { MenuNavigation } from './MenuNavigationDesktop'
@@ -12,18 +12,29 @@ import { ReactComponent as UserMenuUpIcon } from '../../assets/images/icons/user
 import { ReactComponent as CartIcon } from '../../assets/images/icons/cart-icon.svg'
 import { ReactComponent as MenuMobileIcon } from '../../assets/images/icons/menu-mobile.svg'
 
+const POSITION_RELATIVE_CLASS = 'u-position-relative'
+
 export function Header() {
 	const [userMenuOpen, setUserMenuOpen] = useState(false)
 	const { sideCartState, handleClickToggleSideCart } = useSideCart()
+  const headerContainerRef = useRef(null)
 
 	function handleClickUserMenu() {
+    if (headerContainerRef.current) {
+      const headerElement = headerContainerRef.current
+      if (headerElement.classList.contains(POSITION_RELATIVE_CLASS)) {
+        headerElement.classList.remove(POSITION_RELATIVE_CLASS)
+      } else {
+        headerElement.classList.add(POSITION_RELATIVE_CLASS)
+      }
+    }
 		setUserMenuOpen(!userMenuOpen)
 	}
 
 	return (
 		<>
 			<header className="l-header">
-				<div className="container u-position-relative">
+				<div className="container u-position-relative" ref={headerContainerRef}>
 					<div className="row align-items-center justify-content-between">
 						<div className="col-1 l-header__menu-navigation-mobile">
 							<button type="button" onClick={handleClickUserMenu}>

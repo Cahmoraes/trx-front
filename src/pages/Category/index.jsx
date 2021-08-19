@@ -17,65 +17,66 @@ import product6JPG from '../../assets/images/product-search/imagem1-6.jpg'
 import product7JPG from '../../assets/images/product-search/imagem1-7.jpg'
 import product8JPG from '../../assets/images/product-search/imagem1-8.jpg'
 import product9JPG from '../../assets/images/product-search/imagem1-8.jpg'
+import { FilterApplied } from '../../components/FilterApplied'
 
 const products = [
-	{
-		src: product1JPG,
-		name:
-			'Notebook Lenovo Core i5-1035G1 8GB 1TB Tela 15.6” Windows 10 Ideapad S145',
-		price: 'R$ 3.704,05',
-	},
-	{
-		src: product2JPG,
-		name:
-			'Notebook Dell Core i7-8565U 8GB 256GB SSD Tela 15.6” Windows 10 Inspiron 3583-AS90P',
-		oldPrice: 'R$ 4.999,00',
-		price: 'R$ 3.704,05',
-	},
-	{
-		src: product3JPG,
-		name:
-			'Multifuncional HP DeskJet Ink Advantage 2776 Wireless - Impressora, Copiadora, Scanner',
-		oldPrice: 'R$ 499,00',
-		price: 'R$ 373,15',
-	},
-	{
-		src: product4JPG,
-		name:
-			'Computador LG All in One Quad Core 4GB 500GB Tela Full HD 21.5” Windows 10 22V280-L.BJ31P1',
-		price: 'R$ 3.798,00',
-	},
-	{
-		src: product5JPG,
-		name:
-			'Notebook Samsung Dual Core 4GB 64GB SSD Tela Full HD 13.3” Windows 10 Flash F30',
-		price: 'R$ 2.849,00',
-	},
-	{
-		src: product6JPG,
-		name:
-			'Tablet Samsung T505 A7 64GB, 3GB RAM, Tela de 10.4", Câmera Traseira 8MP, Câmera Frontal',
-		oldPrice: 'R$ 1.619,10',
-		price: 'R$ 1.499,00',
-	},
-	{
-		src: product7JPG,
-		name:
-			'Multifuncional Tanque de Tinta Epson EcoTank L3150 Wireless - Impressora, Copiadora, Scanner',
-		oldPrice: 'R$ 1.449,00',
-		price: 'R$ 1.124,10',
-	},
-	{
-		src: product8JPG,
-		name: 'Positivo Twist Tabkids Preto Vem Com Capa Emborrachada',
-		price: 'R$ 349,00',
-	},
-	{
-		src: product9JPG,
-		name:
-			'Notebook Gamer Acer Aspire Nitro AN515-43-R9K7 AMD R5 8GB (GeForce GTX1650 4GB) 1TB + 256...',
-		price: 'R$ 5.634,84',
-	},
+  {
+    src: product1JPG,
+    name:
+      'Notebook Lenovo Core i5-1035G1 8GB 1TB Tela 15.6” Windows 10 Ideapad S145',
+    price: 'R$ 3.704,05',
+  },
+  {
+    src: product2JPG,
+    name:
+      'Notebook Dell Core i7-8565U 8GB 256GB SSD Tela 15.6” Windows 10 Inspiron 3583-AS90P',
+    oldPrice: 'R$ 4.999,00',
+    price: 'R$ 3.704,05',
+  },
+  {
+    src: product3JPG,
+    name:
+      'Multifuncional HP DeskJet Ink Advantage 2776 Wireless - Impressora, Copiadora, Scanner',
+    oldPrice: 'R$ 499,00',
+    price: 'R$ 373,15',
+  },
+  {
+    src: product4JPG,
+    name:
+      'Computador LG All in One Quad Core 4GB 500GB Tela Full HD 21.5” Windows 10 22V280-L.BJ31P1',
+    price: 'R$ 3.798,00',
+  },
+  {
+    src: product5JPG,
+    name:
+      'Notebook Samsung Dual Core 4GB 64GB SSD Tela Full HD 13.3” Windows 10 Flash F30',
+    price: 'R$ 2.849,00',
+  },
+  {
+    src: product6JPG,
+    name:
+      'Tablet Samsung T505 A7 64GB, 3GB RAM, Tela de 10.4", Câmera Traseira 8MP, Câmera Frontal',
+    oldPrice: 'R$ 1.619,10',
+    price: 'R$ 1.499,00',
+  },
+  {
+    src: product7JPG,
+    name:
+      'Multifuncional Tanque de Tinta Epson EcoTank L3150 Wireless - Impressora, Copiadora, Scanner',
+    oldPrice: 'R$ 1.449,00',
+    price: 'R$ 1.124,10',
+  },
+  {
+    src: product8JPG,
+    name: 'Positivo Twist Tabkids Preto Vem Com Capa Emborrachada',
+    price: 'R$ 349,00',
+  },
+  {
+    src: product9JPG,
+    name:
+      'Notebook Gamer Acer Aspire Nitro AN515-43-R9K7 AMD R5 8GB (GeForce GTX1650 4GB) 1TB + 256...',
+    price: 'R$ 5.634,84',
+  },
 ]
 
 const voltagemConfig = {
@@ -132,8 +133,10 @@ export function Category() {
 
       <div className="row">
         <div className={`col-lg-3 l-category__filter-container ${filterMobileState ? 'l-category__filter-container--mobile' : ''}`}>
+          {!filterMobileState && <FilterApplied />}
+
           <h3 className="l-category__filter-title">Filtrar por</h3>
-          
+
           <div className="l-category__filter-header--mobile">
             <h3 className="l-category__filter-title l-category__filter-title--mobile">Filtros</h3>
             <Button
@@ -147,11 +150,12 @@ export function Category() {
             <p className="l-category__filter-count--mobile">1.245 itens</p>
             <div className="l-category__line"></div>
           </div>
-
+          <FilterApplied />
           <FilterCategory />
           <FilterDefault />
           <FilterDefault config={voltagemConfig} />
           <FilterDefault />
+          {filterMobileState && <Button>Limpar filtros</Button>}
         </div>
         <div className="col-lg-9 l-category__product-results">
           {
@@ -172,4 +176,4 @@ export function Category() {
     </div>
   )
 }
-	
+

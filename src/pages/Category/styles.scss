@@ -31,19 +31,19 @@
     &-button {
       button {
         display: none;
-  
+
         svg {
           width: 20px;
         }
-        
+
         @include device (md) {
           display: flex;
         }
-    
+
         @include device (sm) {
           display: flex;
         }
-  
+
       }
     }
 
@@ -54,7 +54,7 @@
       line-height: 3.6rem;
       font-weight: 500;
       display: block;
-  
+
       @include device(sm) {
         display: none;
       }
@@ -62,11 +62,11 @@
       @include device(md) {
         display: none;
       }
-  
+
       &--mobile {
         text-align: center;
         margin-bottom: 0;
-        
+
         @include device(sm) {
           display: block;
         }
@@ -86,7 +86,7 @@
     &-count--mobile {
       text-align: center;
     }
-    
+
     &-header--mobile {
       display: none;
       position: relative;
@@ -104,6 +104,10 @@
 
   &__filter-container {
 
+    @include device(md) {
+      display: none;
+    }
+
     @include device(sm) {
       display: none;
     }
@@ -119,7 +123,7 @@
       background: $white;
       display: none;
       padding-top: 24px;
-      padding-bottom: 32px; 
+      padding-bottom: 32px;
       @extend %scrollbar-stylized;
 
       @include device(sm) {
