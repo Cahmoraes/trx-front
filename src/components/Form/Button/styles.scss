@@ -10,6 +10,11 @@
   align-items: center;
   transition: all 300ms ease;
 
+  &--none {
+    background: transparent;
+    border: 0;
+  }
+
   svg {
     transition: inherit;
   }

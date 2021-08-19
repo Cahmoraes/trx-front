@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Breadcrumb } from '../../components/Breadcrumb'
 import { FilterCategory } from '../../components/FilterCategory'
 import { FilterDefault } from '../../components/FilterDefault'
@@ -6,6 +7,7 @@ import { Button } from '../../components/Form/Button'
 import { ProductBox } from '../../components/ProductBox'
 
 import { ReactComponent as FilterIcon } from '../../assets/images/icons/custom.svg'
+import { ReactComponent as IconClose } from '../../assets/images/icons/close.svg'
 import product1JPG from '../../assets/images/product-search/imagem1-1.jpg'
 import product2JPG from '../../assets/images/product-search/imagem1-2.jpg'
 import product3JPG from '../../assets/images/product-search/imagem1-3.jpg'
@@ -68,7 +70,21 @@ const products = [
   }
 ]
 
+const voltagemConfig = {
+  title: 'Voltagem',
+  items: [
+    '110v',
+    '220v '
+  ]
+}
+
 export function Category() {
+  const [filterMobileState, setFilterMobileState] = useState(false)
+
+  function handleClickFilterMobile() {
+    setFilterMobileState(state => !state)
+  }
+
   return (
     <div className="l-category container">
       <div className="row">
@@ -81,7 +97,12 @@ export function Category() {
 
       <div className="row">
         <div className="col-12">
-          <h1 className="l-category__title">Informática</h1>
+          <h2 className="l-category__title">Resultados de busca para <span className="u-color-primary-400">
+            <strong>
+              ”cafeteira”
+            </strong>
+          </span>
+          </h2>
           <p className="l-category__visualization">Visualizando 1 - 15 de 24.660</p>
           <div className="l-category__line"></div>
         </div>
@@ -89,7 +110,7 @@ export function Category() {
 
       <div className="row justify-content-between mb-4">
         <div className="col-5 l-category__filter-button">
-          <Button color="secondary">
+          <Button color="secondary" overflowHidden onClick={handleClickFilterMobile}>
             <FilterIcon className="mr-2" /> Filtrar
           </Button>
         </div>
@@ -101,10 +122,26 @@ export function Category() {
       </div>
 
       <div className="row">
-        <div className="col-lg-3 l-category__filter-container">
-          <span className="l-category__filter-title">Filtrar por</span>
+        <div className={`col-lg-3 l-category__filter-container ${filterMobileState ? 'l-category__filter-container--mobile' : ''}`}>
+          <h3 className="l-category__filter-title">Filtrar por</h3>
+          
+          <div className="l-category__filter-header--mobile">
+            <h3 className="l-category__filter-title l-category__filter-title--mobile">Filtros</h3>
+            <Button
+              color="none"
+              className="l-category__filter-close--mobile"
+              overflowHidden
+              onClick={handleClickFilterMobile}
+            >
+              <IconClose />
+            </Button>
+            <p className="l-category__filter-count--mobile">1.245 itens</p>
+            <div className="l-category__line"></div>
+          </div>
+
           <FilterCategory />
           <FilterDefault />
+          <FilterDefault config={voltagemConfig} />
           <FilterDefault />
         </div>
         <div className="col-lg-9 l-category__product-results">

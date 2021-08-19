@@ -17,6 +17,7 @@
     height: calc(100% - 30px);
     padding: 28px 0;
     overflow: auto;
+    @extend %scrollbar-stylized;
   }
 
   &__image-container {

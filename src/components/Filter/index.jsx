@@ -1,4 +1,4 @@
-import { ReactComponent as IconClose } from "../../assets/images/icons/close.svg";
+import { ReactComponent as IconClose } from "../../assets/images/icons/close.svg"
 
 export function Filter({ tag, className, showIcon = false }) {
   return (

@@ -33,9 +33,9 @@ export function ProductSpyModal({ productConfig = productMock, setProductSpyModa
         <div className="container">
           <div className="row">
             <header className="c-product-spy-modal__header col-12">
-              <button className="c-product-spy-modal__close" onClick={() => setProductSpyModalState(false)}>
+              <Button color="none" overflowHidden className="c-product-spy-modal__close" onClick={() => setProductSpyModalState(false)}>
                 <CloseIcon />
-              </button>
+              </Button>
             </header>
           </div>
 

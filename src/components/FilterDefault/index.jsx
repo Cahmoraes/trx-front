@@ -32,7 +32,7 @@ export function FilterDefault({ config = configItems }) {
           {config.title}
         </h3>
         <button className="c-filter-default__button" onClick={handleClickButtonFilter}>
-          {buttonFilterState ? <PlusIcon /> : <TraceIcon />}
+          {buttonFilterState ? <TraceIcon /> : <PlusIcon />}
         </button>
       </div>
 
