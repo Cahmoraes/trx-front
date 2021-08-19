@@ -1,3 +1,3 @@
 export function Loader() {
-  return <div className="c-loader"></div>;
+	return <div className="c-loader"></div>
 }

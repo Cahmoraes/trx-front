@@ -1,4 +1,4 @@
-import { ReactComponent as CloseIcon } from "../../../assets/images/icons/close.svg"
+import { ReactComponent as CloseIcon } from '../../../assets/images/icons/close.svg'
 
 const HIDE_SCROLL = 'u-hide-scroll'
 
