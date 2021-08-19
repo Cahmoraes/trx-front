@@ -29,9 +29,8 @@
 @import "../components/FilterDefault/styles";
 @import "../components/ProductBox/styles";
 @import "../components/ProductBox/ProductSpyModal/styles";
-@import "../components/SideCart/styles.scss";
-@import "../components/SideCart/SideCartProduct/styles.scss";
-
+@import "../components/SideCart/styles";
+@import "../components/SideCart/SideCartProduct/styles";
 
 // Header
 @import "../components/Header/Search/styles";
@@ -62,4 +61,4 @@
 @import "../pages/Department/styles";
 
 // Category
-@import "../pages/Category/styles.scss";
+@import "../pages/Category/styles";

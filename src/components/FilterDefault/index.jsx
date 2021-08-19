@@ -17,41 +17,35 @@ const configItems = {
 }
 
 export function FilterDefault({ config = configItems }) {
-	const [buttonFilterState, setButtonFilterState] = useState(true)
 
-	function handleClickButtonFilter() {
-		setButtonFilterState((state) => !state)
-	}
+  const [buttonFilterState, setButtonFilterState] = useState(true)
 
-	return (
-		<div className="c-filter-default">
-			<div className="c-filter-default__title-container">
-				<h3 className="c-filter-default__title">{config.title}</h3>
-				<button
-					className="c-filter-default__button"
-					onClick={handleClickButtonFilter}
-				>
-					{buttonFilterState ? <PlusIcon /> : <TraceIcon />}
-				</button>
-			</div>
+  function handleClickButtonFilter() {
+    setButtonFilterState((state) => !state)
+  }
 
-			<div className="c-filter-default__list">
-				{buttonFilterState &&
-					config.items.map((item, index) =>
-						index % 2 === 0 ? (
-							<Filter
-								showIcon
-								className="c-filter-default__item"
-								tag={item}
-								key={item}
-							/>
-						) : (
-							<Filter className="c-filter-default__item" tag={item} key={item} />
-						)
-					)}
-			</div>
+  return (
+    <div className="c-filter-default">
 
-			<div className="c-filter-default__line"></div>
-		</div>
-	)
+      <div className="c-filter-default__title-container">
+        <h3 className="c-filter-default__title">
+          {config.title}
+        </h3>
+        <button className="c-filter-default__button" onClick={handleClickButtonFilter}>
+          {buttonFilterState ? <TraceIcon /> : <PlusIcon />}
+        </button>
+      </div>
+
+      <div className="c-filter-default__list">
+        {
+          buttonFilterState && config.items.map((item, index) => (
+            index % 2 === 0 ? <Filter showIcon className="c-filter-default__item" tag={item} key={item} /> :
+              <Filter className="c-filter-default__item" tag={item} key={item} />
+          ))
+        }
+      </div>
+
+      <div className="c-filter-default__line"></div>
+    </div>
+  )
 }

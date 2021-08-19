@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ReactComponent as SearchIcon } from '../../assets/images/icons/search.svg'
+import { Button } from '../Form/Button'
 import { ProductSpyModal } from './ProductSpyModal'
 
 export function ProductBox({ product }) {
@@ -19,9 +20,9 @@ export function ProductBox({ product }) {
         <span className="c-product-box__old-price">{product.oldPrice ? `de ${product.oldPrice}` : ''}</span>
         <span className="c-product-box__price">{product.oldPrice ? 'por ' : ''} {product.price}</span>
       </div>
-      <button className="c-product-box__button" onClick={handleClickSpyModal}>
+      <Button color="none" overflowHidden className="c-product-box__button" onClick={handleClickSpyModal}>
         <SearchIcon /> Espiar
-      </button>
+      </Button>
       {
         productSpyModalState && <ProductSpyModal setProductSpyModalState={setProductSpyModalState}  />
       }
