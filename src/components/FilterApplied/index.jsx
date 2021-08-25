@@ -12,7 +12,7 @@ const configItems = {
   ],
 }
 
-export function FilterApplied({ config = configItems }) {
+export function FilterApplied({ config = configItems, className }) {
 
   const [buttonFilterState, setButtonFilterState] = useState(true)
 
@@ -21,7 +21,7 @@ export function FilterApplied({ config = configItems }) {
   }
 
   return (
-    <div className="c-filter-applied">
+    <div className={`c-filter-applied ${className ? className : ''}`}>
 
       <div className="c-filter-applied__title-container">
         <h3 className="c-filter-applied__title">
@@ -34,9 +34,8 @@ export function FilterApplied({ config = configItems }) {
 
       <div className="c-filter-applied__list">
         {
-          buttonFilterState && config.items.map((item, index) => (
-            index % 2 === 0 ? <Filter showIcon className="c-filter-applied__item" tag={item} key={item} /> :
-              <Filter className="c-filter-applied__item" tag={item} key={item} />
+          buttonFilterState && config.items.map((item) => (
+            <Filter showIcon className="c-filter-applied__item" tag={item} key={item} />
           ))
         }
       </div>

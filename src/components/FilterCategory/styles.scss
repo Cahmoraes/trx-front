@@ -1,6 +1,6 @@
 .c-filter-category {
   color: $gray-500;
-  
+
   &__container {
     padding: 12px;
   }
@@ -38,7 +38,7 @@
     padding-left: 24px;
     margin-bottom: 24px;
   }
-  
+
   &__list-title {
     display: flex;
     margin-top: 16px;
@@ -63,7 +63,7 @@
     height: 1px;
     width: 100%;
     background: $gray-200;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }

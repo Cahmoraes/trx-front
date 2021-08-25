@@ -1,6 +1,6 @@
 .c-filter-applied {
   color: $gray-500;
-  margin-bottom: 32px;
+  // margin-bottom: 32px;
 
   &__title-container {
     display: flex;
@@ -44,8 +44,8 @@
     height: 1px;
     width: 100%;
     background: $gray-200;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-top: 16px;
+    margin-bottom: 10px;
 
     @include device(md) {
       display: none;

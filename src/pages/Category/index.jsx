@@ -133,8 +133,7 @@ export function Category() {
 
       <div className="row">
         <div className={`col-lg-3 l-category__filter-container ${filterMobileState ? 'l-category__filter-container--mobile' : ''}`}>
-          {!filterMobileState && <FilterApplied />}
-
+          {!filterMobileState && <FilterApplied className="u-mb-40" />}
           <h3 className="l-category__filter-title">Filtrar por</h3>
 
           <div className="l-category__filter-header--mobile">
@@ -149,13 +148,17 @@ export function Category() {
             </Button>
             <p className="l-category__filter-count--mobile">1.245 itens</p>
             <div className="l-category__line"></div>
+            {filterMobileState && <FilterApplied className="u-mb-40" />}
           </div>
-          <FilterApplied />
           <FilterCategory />
           <FilterDefault />
           <FilterDefault config={voltagemConfig} />
           <FilterDefault />
-          {filterMobileState && <Button>Limpar filtros</Button>}
+          {filterMobileState && (
+            <div className="l-category__filter-clear--mobile">
+              <Button>Limpar filtros</Button>
+            </div>
+          )}
         </div>
         <div className="col-lg-9 l-category__product-results">
           {

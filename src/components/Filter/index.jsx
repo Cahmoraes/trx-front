@@ -1,9 +1,8 @@
 import { ReactComponent as IconClose } from '../../assets/images/icons/close.svg'
 
-
 export function Filter({ tag, className, showIcon = false }) {
 	return (
-		<div
+		<button
 			className={`c-filter ${showIcon ? 'c-filter--applied' : ''} ${
 				className ? className : ''
 			}`}
@@ -14,6 +13,6 @@ export function Filter({ tag, className, showIcon = false }) {
 					<IconClose />
 				</button>
 			)}
-		</div>
+		</button>
 	)
 }
